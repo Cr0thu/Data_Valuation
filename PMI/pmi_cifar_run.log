@@ -1,0 +1,204 @@
+Starting PMI CIFAR experiment at Thu Mar  6 00:05:14 CST 2025
+Installing required dependencies...
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/
+Requirement already satisfied: jupyter in /opt/conda/lib/python3.10/site-packages (1.1.1)
+Requirement already satisfied: nbconvert in /opt/conda/lib/python3.10/site-packages (7.16.6)
+Requirement already satisfied: notebook in /opt/conda/lib/python3.10/site-packages (from jupyter) (7.3.2)
+Requirement already satisfied: jupyter-console in /opt/conda/lib/python3.10/site-packages (from jupyter) (6.6.3)
+Requirement already satisfied: ipykernel in /opt/conda/lib/python3.10/site-packages (from jupyter) (6.29.3)
+Requirement already satisfied: ipywidgets in /opt/conda/lib/python3.10/site-packages (from jupyter) (8.1.2)
+Requirement already satisfied: jupyterlab in /opt/conda/lib/python3.10/site-packages (from jupyter) (4.3.5)
+Requirement already satisfied: beautifulsoup4 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (4.12.2)
+Requirement already satisfied: bleach!=5.0.0 in /opt/conda/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert) (6.2.0)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.10/site-packages (from nbconvert) (0.7.1)
+Requirement already satisfied: jinja2>=3.0 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (3.1.2)
+Requirement already satisfied: jupyter-core>=4.7 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (5.7.1)
+Requirement already satisfied: jupyterlab-pygments in /opt/conda/lib/python3.10/site-packages (from nbconvert) (0.3.0)
+Requirement already satisfied: markupsafe>=2.0 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (2.1.1)
+Requirement already satisfied: mistune<4,>=2.0.3 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (3.1.2)
+Requirement already satisfied: nbclient>=0.5.0 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (0.10.2)
+Requirement already satisfied: nbformat>=5.7 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (5.10.4)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.10/site-packages (from nbconvert) (23.2)
+Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (1.5.1)
+Requirement already satisfied: pygments>=2.4.1 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (2.15.1)
+Requirement already satisfied: traitlets>=5.1 in /opt/conda/lib/python3.10/site-packages (from nbconvert) (5.7.1)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.10/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in /opt/conda/lib/python3.10/site-packages (from bleach[css]!=5.0.0->nbconvert) (1.4.0)
+Requirement already satisfied: platformdirs>=2.5 in /opt/conda/lib/python3.10/site-packages (from jupyter-core>=4.7->nbconvert) (4.2.0)
+Requirement already satisfied: typing-extensions in /opt/conda/lib/python3.10/site-packages (from mistune<4,>=2.0.3->nbconvert) (4.10.0)
+Requirement already satisfied: jupyter-client>=6.1.12 in /opt/conda/lib/python3.10/site-packages (from nbclient>=0.5.0->nbconvert) (8.6.0)
+Requirement already satisfied: fastjsonschema>=2.15 in /opt/conda/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert) (2.21.1)
+Requirement already satisfied: jsonschema>=2.6 in /opt/conda/lib/python3.10/site-packages (from nbformat>=5.7->nbconvert) (4.23.0)
+Requirement already satisfied: soupsieve>1.2 in /opt/conda/lib/python3.10/site-packages (from beautifulsoup4->nbconvert) (2.5)
+Requirement already satisfied: comm>=0.1.1 in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (0.2.1)
+Requirement already satisfied: debugpy>=1.6.5 in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (1.8.1)
+Requirement already satisfied: ipython>=7.23.1 in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (8.15.0)
+Requirement already satisfied: matplotlib-inline>=0.1 in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (0.1.6)
+Requirement already satisfied: nest-asyncio in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (1.6.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (5.9.0)
+Requirement already satisfied: pyzmq>=24 in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (25.1.2)
+Requirement already satisfied: tornado>=6.1 in /opt/conda/lib/python3.10/site-packages (from ipykernel->jupyter) (6.4)
+Requirement already satisfied: widgetsnbextension~=4.0.10 in /opt/conda/lib/python3.10/site-packages (from ipywidgets->jupyter) (4.0.10)
+Requirement already satisfied: jupyterlab-widgets~=3.0.10 in /opt/conda/lib/python3.10/site-packages (from ipywidgets->jupyter) (3.0.10)
+Requirement already satisfied: prompt-toolkit>=3.0.30 in /opt/conda/lib/python3.10/site-packages (from jupyter-console->jupyter) (3.0.36)
+Requirement already satisfied: async-lru>=1.0.0 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (2.0.4)
+Requirement already satisfied: httpx>=0.25.0 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (0.27.0)
+Requirement already satisfied: jupyter-lsp>=2.0.0 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (2.2.5)
+Requirement already satisfied: jupyter-server<3,>=2.4.0 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (2.15.0)
+Requirement already satisfied: jupyterlab-server<3,>=2.27.1 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (2.27.3)
+Requirement already satisfied: notebook-shim>=0.2 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (0.2.4)
+Requirement already satisfied: setuptools>=40.8.0 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (68.0.0)
+Requirement already satisfied: tomli>=1.2.2 in /opt/conda/lib/python3.10/site-packages (from jupyterlab->jupyter) (2.0.1)
+Requirement already satisfied: anyio in /opt/conda/lib/python3.10/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (4.3.0)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.10/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (2023.7.22)
+Requirement already satisfied: httpcore==1.* in /opt/conda/lib/python3.10/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (1.0.4)
+Requirement already satisfied: idna in /opt/conda/lib/python3.10/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (3.4)
+Requirement already satisfied: sniffio in /opt/conda/lib/python3.10/site-packages (from httpx>=0.25.0->jupyterlab->jupyter) (1.3.1)
+Requirement already satisfied: h11<0.15,>=0.13 in /opt/conda/lib/python3.10/site-packages (from httpcore==1.*->httpx>=0.25.0->jupyterlab->jupyter) (0.14.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.2.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (5.1.1)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.18.1)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.7.5)
+Requirement already satisfied: stack-data in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (0.2.0)
+Requirement already satisfied: exceptiongroup in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (1.0.4)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel->jupyter) (4.8.0)
+Requirement already satisfied: attrs>=22.2.0 in /opt/conda/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (23.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /opt/conda/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (2024.10.1)
+Requirement already satisfied: referencing>=0.28.4 in /opt/conda/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (0.36.2)
+Requirement already satisfied: rpds-py>=0.7.1 in /opt/conda/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (0.23.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in /opt/conda/lib/python3.10/site-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert) (2.8.2)
+Requirement already satisfied: argon2-cffi>=21.1 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (23.1.0)
+Requirement already satisfied: jupyter-events>=0.11.0 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals>=0.4.4 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.5.3)
+Requirement already satisfied: overrides>=5.0 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (7.7.0)
+Requirement already satisfied: prometheus-client>=0.9 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.21.1)
+Requirement already satisfied: send2trash>=1.8.2 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.8.3)
+Requirement already satisfied: terminado>=0.8.3 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.18.1)
+Requirement already satisfied: websocket-client>=1.7 in /opt/conda/lib/python3.10/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.7.0)
+Requirement already satisfied: babel>=2.10 in /opt/conda/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2.17.0)
+Requirement already satisfied: json5>=0.9.0 in /opt/conda/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (0.10.0)
+Requirement already satisfied: requests>=2.31 in /opt/conda/lib/python3.10/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2.31.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.10/site-packages (from prompt-toolkit>=3.0.30->jupyter-console->jupyter) (0.2.13)
+Requirement already satisfied: argon2-cffi-bindings in /opt/conda/lib/python3.10/site-packages (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (21.2.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel->jupyter) (0.8.3)
+Requirement already satisfied: python-json-logger>=2.0.4 in /opt/conda/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (3.2.1)
+Requirement already satisfied: pyyaml>=5.3 in /opt/conda/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (6.0.1)
+Requirement already satisfied: rfc3339-validator in /opt/conda/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in /opt/conda/lib/python3.10/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (0.1.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel->jupyter) (0.7.0)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.10/site-packages (from python-dateutil>=2.8.2->jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /opt/conda/lib/python3.10/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/conda/lib/python3.10/site-packages (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter) (2.2.1)
+Requirement already satisfied: executing in /opt/conda/lib/python3.10/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (0.8.3)
+Requirement already satisfied: asttokens in /opt/conda/lib/python3.10/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (2.0.5)
+Requirement already satisfied: pure-eval in /opt/conda/lib/python3.10/site-packages (from stack-data->ipython>=7.23.1->ipykernel->jupyter) (0.2.2)
+Requirement already satisfied: fqdn in /opt/conda/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.5.1)
+Requirement already satisfied: isoduration in /opt/conda/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (20.11.0)
+Requirement already satisfied: jsonpointer>1.13 in /opt/conda/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (2.1)
+Requirement already satisfied: uri-template in /opt/conda/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.3.0)
+Requirement already satisfied: webcolors>=24.6.0 in /opt/conda/lib/python3.10/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (24.11.1)
+Requirement already satisfied: cffi>=1.0.1 in /opt/conda/lib/python3.10/site-packages (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.15.1)
+Requirement already satisfied: pycparser in /opt/conda/lib/python3.10/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (2.21)
+Requirement already satisfied: arrow>=0.15.0 in /opt/conda/lib/python3.10/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (1.3.0)
+Requirement already satisfied: types-python-dateutil>=2.8.10 in /opt/conda/lib/python3.10/site-packages (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter) (2.9.0.20241206)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Creating output directories...
+Converting notebook to Python script...
+Running experiment...
+cuda
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Identity()
+)
+Already allocated: 234.9189453125 MB
+torch.Size([20000, 513]) torch.Size([20000])
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [14:20<43:02, 860.75s/it] 50%|█████     | 2/4 [28:36<28:35, 857.55s/it] 75%|███████▌  | 3/4 [42:22<14:03, 843.55s/it]100%|██████████| 4/4 [56:21<00:00, 841.52s/it]100%|██████████| 4/4 [56:21<00:00, 845.34s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [17:42<53:07, 1062.40s/it] 50%|█████     | 2/4 [35:25<35:26, 1063.05s/it] 75%|███████▌  | 3/4 [53:34<17:54, 1074.58s/it]100%|██████████| 4/4 [1:12:31<00:00, 1099.26s/it]100%|██████████| 4/4 [1:12:31<00:00, 1087.83s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [22:46<1:08:18, 1366.10s/it] 50%|█████     | 2/4 [44:10<43:56, 1318.22s/it]   75%|███████▌  | 3/4 [1:05:55<21:51, 1312.00s/it]100%|██████████| 4/4 [1:27:34<00:00, 1306.71s/it]100%|██████████| 4/4 [1:27:34<00:00, 1313.50s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [13:33<40:39, 813.22s/it] 50%|█████     | 2/4 [28:05<28:15, 847.68s/it] 75%|███████▌  | 3/4 [42:40<14:20, 860.38s/it]100%|██████████| 4/4 [57:27<00:00, 870.93s/it]100%|██████████| 4/4 [57:27<00:00, 861.90s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [18:53<56:39, 1133.10s/it] 50%|█████     | 2/4 [37:09<37:02, 1111.34s/it] 75%|███████▌  | 3/4 [55:40<18:31, 1111.50s/it]100%|██████████| 4/4 [1:12:59<00:00, 1082.64s/it]100%|██████████| 4/4 [1:12:59<00:00, 1094.83s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [23:27<1:10:22, 1407.60s/it] 50%|█████     | 2/4 [46:28<46:23, 1391.72s/it]   75%|███████▌  | 3/4 [1:08:37<22:43, 1363.12s/it]100%|██████████| 4/4 [1:31:19<00:00, 1362.96s/it]100%|██████████| 4/4 [1:31:19<00:00, 1370.00s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [14:04<42:12, 844.28s/it] 50%|█████     | 2/4 [28:10<28:10, 845.29s/it] 75%|███████▌  | 3/4 [41:47<13:52, 832.69s/it]100%|██████████| 4/4 [55:32<00:00, 829.62s/it]100%|██████████| 4/4 [55:32<00:00, 833.22s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [17:48<53:24, 1068.10s/it] 50%|█████     | 2/4 [35:20<35:17, 1058.98s/it] 75%|███████▌  | 3/4 [52:35<17:27, 1047.76s/it]100%|██████████| 4/4 [1:10:29<00:00, 1058.08s/it]100%|██████████| 4/4 [1:10:29<00:00, 1057.25s/it]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [24:25<1:13:15, 1465.00s/it] 50%|█████     | 2/4 [47:23<47:08, 1414.00s/it]   75%|███████▌  | 3/4 [1:10:49<23:30, 1410.53s/it]100%|██████████| 4/4 [1:34:18<00:00, 1409.65s/it]100%|██████████| 4/4 [1:34:18<00:00, 1414.50s/it]
+Experiment completed at Thu Mar  6 11:04:39 CST 2025
