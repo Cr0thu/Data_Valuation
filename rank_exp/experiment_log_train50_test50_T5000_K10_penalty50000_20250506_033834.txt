@@ -1,0 +1,13 @@
+Running experiment repetition 1/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 4.3516 seconds
+Time taken for LMI score (AEMINE) calculation: 314.5515 seconds
+Average score for rho = 0.3418: nan (var = nan)
+LMI score (AEMINE) for rho = 0.3418: 0.0066
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 3.9234 seconds
+Time taken for LMI score (AEMINE) calculation: 314.8325 seconds
+Average score for rho = 0.3785: nan (var = nan)
+LMI score (AEMINE) for rho = 0.3785: -0.0124
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 3.9246 seconds

@@ -1,0 +1,2 @@
+Running experiment repetition 1/10
+Running experiment with rho = 0.3418

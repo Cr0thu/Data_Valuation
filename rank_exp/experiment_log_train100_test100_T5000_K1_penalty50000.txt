@@ -1,0 +1,429 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 483.4476 seconds
+Time taken for LMI score (AEMINE) calculation: 19.6138 seconds
+Average score for rho = 0.3418: 32.0306 (var = 4.2943)
+LMI score (AEMINE) for rho = 0.3418: 0.0703
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 500.6286 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7234 seconds
+Average score for rho = 0.3785: 32.2494 (var = 3.9824)
+LMI score (AEMINE) for rho = 0.3785: 0.2124
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 486.4230 seconds
+Time taken for LMI score (AEMINE) calculation: 16.5502 seconds
+Average score for rho = 0.4054: 32.3714 (var = 4.0440)
+LMI score (AEMINE) for rho = 0.4054: 0.2151
+Running experiment with rho = 0.4269
+Time taken for score calculation over 5000 iterations: 477.8650 seconds
+Time taken for LMI score (AEMINE) calculation: 17.3723 seconds
+Average score for rho = 0.4269: 32.4764 (var = 3.9517)
+LMI score (AEMINE) for rho = 0.4269: 0.3446
+Running experiment with rho = 0.4439
+Time taken for score calculation over 5000 iterations: 466.8381 seconds
+Time taken for LMI score (AEMINE) calculation: 17.0283 seconds
+Average score for rho = 0.4439: 32.6055 (var = 3.6678)
+LMI score (AEMINE) for rho = 0.4439: 0.4625
+Running experiment with rho = 0.4604
+Time taken for score calculation over 5000 iterations: 461.6671 seconds
+Time taken for LMI score (AEMINE) calculation: 16.4570 seconds
+Average score for rho = 0.4604: 32.6325 (var = 3.5936)
+LMI score (AEMINE) for rho = 0.4604: 0.5168
+Running experiment with rho = 0.4734
+Time taken for score calculation over 5000 iterations: 477.0755 seconds
+Time taken for LMI score (AEMINE) calculation: 16.3848 seconds
+Average score for rho = 0.4734: 32.7382 (var = 3.5618)
+LMI score (AEMINE) for rho = 0.4734: 0.5510
+Running experiment with rho = 0.4841
+Time taken for score calculation over 5000 iterations: 469.9335 seconds
+Time taken for LMI score (AEMINE) calculation: 16.2960 seconds
+Average score for rho = 0.4841: 32.7748 (var = 3.4372)
+LMI score (AEMINE) for rho = 0.4841: 0.7021
+Running experiment with rho = 0.4963
+Time taken for score calculation over 5000 iterations: 476.2469 seconds
+Time taken for LMI score (AEMINE) calculation: 18.6682 seconds
+Average score for rho = 0.4963: 32.8197 (var = 3.3732)
+LMI score (AEMINE) for rho = 0.4963: 0.8615
+Running experiment with rho = 0.5
+Time taken for score calculation over 5000 iterations: 467.4492 seconds
+Time taken for LMI score (AEMINE) calculation: 17.3623 seconds
+Average score for rho = 0.5: 32.8016 (var = 3.3187)
+LMI score (AEMINE) for rho = 0.5: 0.9141
+Kendall's Tau of average scores for repetition 1/1: 0.9556
+Kendall's Tau of LMI scores (AEMINE) for repetition 1/1: 1.0000
+
+Final Results:
+Average Kendall's Tau of average scores over 1 repetitions: 0.9556 (var = 0.0000)
+Average Kendall's Tau of LMI scores (AEMINE) over 1 repetitions: 1.0000 (var = 0.0000)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 32.0306, var = 0.0000
+  rho = 0.3418: avg_lmi_aemine = 0.0703, var_lmi_aemine = 0.0000
+  rho = 0.3785: avg = 32.2494, var = 0.0000
+  rho = 0.3785: avg_lmi_aemine = 0.2124, var_lmi_aemine = 0.0000
+  rho = 0.4054: avg = 32.3714, var = 0.0000
+  rho = 0.4054: avg_lmi_aemine = 0.2151, var_lmi_aemine = 0.0000
+  rho = 0.4269: avg = 32.4764, var = 0.0000
+  rho = 0.4269: avg_lmi_aemine = 0.3446, var_lmi_aemine = 0.0000
+  rho = 0.4439: avg = 32.6055, var = 0.0000
+  rho = 0.4439: avg_lmi_aemine = 0.4625, var_lmi_aemine = 0.0000
+  rho = 0.4604: avg = 32.6325, var = 0.0000
+  rho = 0.4604: avg_lmi_aemine = 0.5168, var_lmi_aemine = 0.0000
+  rho = 0.4734: avg = 32.7382, var = 0.0000
+  rho = 0.4734: avg_lmi_aemine = 0.5510, var_lmi_aemine = 0.0000
+  rho = 0.4841: avg = 32.7748, var = 0.0000
+  rho = 0.4841: avg_lmi_aemine = 0.7021, var_lmi_aemine = 0.0000
+  rho = 0.4963: avg = 32.8197, var = 0.0000
+  rho = 0.4963: avg_lmi_aemine = 0.8615, var_lmi_aemine = 0.0000
+  rho = 0.5: avg = 32.8016, var = 0.0000
+  rho = 0.5: avg_lmi_aemine = 0.9141, var_lmi_aemine = 0.0000
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 505.6619 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7332 seconds
+Average score for rho = 0.3418: 31.2834 (var = 2.8305)
+LMI score (AEMINE) for rho = 0.3418: -0.0055
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 495.0056 seconds
+Time taken for LMI score (AEMINE) calculation: 15.9192 seconds
+Average score for rho = 0.3785: 31.2658 (var = 2.7185)
+LMI score (AEMINE) for rho = 0.3785: 0.0091
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 504.8752 seconds
+Time taken for LMI score (AEMINE) calculation: 16.4653 seconds
+Average score for rho = 0.4054: 31.3494 (var = 2.7408)
+LMI score (AEMINE) for rho = 0.4054: -0.0074
+Running experiment with rho = 0.4269
+Time taken for score calculation over 5000 iterations: 481.3897 seconds
+Time taken for LMI score (AEMINE) calculation: 16.2692 seconds
+Average score for rho = 0.4269: 31.3670 (var = 2.6196)
+LMI score (AEMINE) for rho = 0.4269: 0.0309
+Running experiment with rho = 0.4439
+Time taken for score calculation over 5000 iterations: 484.2307 seconds
+Time taken for LMI score (AEMINE) calculation: 15.9427 seconds
+Average score for rho = 0.4439: 31.3475 (var = 2.8289)
+LMI score (AEMINE) for rho = 0.4439: 0.0309
+Running experiment with rho = 0.4604
+Time taken for score calculation over 5000 iterations: 471.5240 seconds
+Time taken for LMI score (AEMINE) calculation: 15.9884 seconds
+Average score for rho = 0.4604: 31.3425 (var = 2.7370)
+LMI score (AEMINE) for rho = 0.4604: -0.0043
+Running experiment with rho = 0.4734
+Time taken for score calculation over 5000 iterations: 465.4213 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7554 seconds
+Average score for rho = 0.4734: 31.3584 (var = 2.6099)
+LMI score (AEMINE) for rho = 0.4734: 0.0575
+Running experiment with rho = 0.4841
+Time taken for score calculation over 5000 iterations: 467.4117 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7701 seconds
+Average score for rho = 0.4841: 31.3850 (var = 2.6941)
+LMI score (AEMINE) for rho = 0.4841: -0.0111
+Running experiment with rho = 0.4963
+Time taken for score calculation over 5000 iterations: 459.7881 seconds
+Time taken for LMI score (AEMINE) calculation: 17.3539 seconds
+Average score for rho = 0.4963: 31.3627 (var = 2.7556)
+LMI score (AEMINE) for rho = 0.4963: -0.0290
+Running experiment with rho = 0.5
+Time taken for score calculation over 5000 iterations: 470.1277 seconds
+Time taken for LMI score (AEMINE) calculation: 16.2145 seconds
+Average score for rho = 0.5: 31.3903 (var = 2.6534)
+LMI score (AEMINE) for rho = 0.5: 0.0929
+Kendall's Tau of average scores for repetition 1/1: 0.6000
+Kendall's Tau of LMI scores (AEMINE) for repetition 1/1: 0.0667
+
+Final Results:
+Average Kendall's Tau of average scores over 1 repetitions: 0.6000 (var = 0.0000)
+Average Kendall's Tau of LMI scores (AEMINE) over 1 repetitions: 0.0667 (var = 0.0000)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 31.2834, var = 0.0000
+  rho = 0.3418: avg_lmi_aemine = -0.0055, var_lmi_aemine = 0.0000
+  rho = 0.3785: avg = 31.2658, var = 0.0000
+  rho = 0.3785: avg_lmi_aemine = 0.0091, var_lmi_aemine = 0.0000
+  rho = 0.4054: avg = 31.3494, var = 0.0000
+  rho = 0.4054: avg_lmi_aemine = -0.0074, var_lmi_aemine = 0.0000
+  rho = 0.4269: avg = 31.3670, var = 0.0000
+  rho = 0.4269: avg_lmi_aemine = 0.0309, var_lmi_aemine = 0.0000
+  rho = 0.4439: avg = 31.3475, var = 0.0000
+  rho = 0.4439: avg_lmi_aemine = 0.0309, var_lmi_aemine = 0.0000
+  rho = 0.4604: avg = 31.3425, var = 0.0000
+  rho = 0.4604: avg_lmi_aemine = -0.0043, var_lmi_aemine = 0.0000
+  rho = 0.4734: avg = 31.3584, var = 0.0000
+  rho = 0.4734: avg_lmi_aemine = 0.0575, var_lmi_aemine = 0.0000
+  rho = 0.4841: avg = 31.3850, var = 0.0000
+  rho = 0.4841: avg_lmi_aemine = -0.0111, var_lmi_aemine = 0.0000
+  rho = 0.4963: avg = 31.3627, var = 0.0000
+  rho = 0.4963: avg_lmi_aemine = -0.0290, var_lmi_aemine = 0.0000
+  rho = 0.5: avg = 31.3903, var = 0.0000
+  rho = 0.5: avg_lmi_aemine = 0.0929, var_lmi_aemine = 0.0000
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 468.4273 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7934 seconds
+Average score for rho = 0.3418: 32.1807 (var = 4.2887)
+LMI score (AEMINE) for rho = 0.3418: 0.0347
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 479.0362 seconds
+Time taken for LMI score (AEMINE) calculation: 16.5553 seconds
+Average score for rho = 0.3785: 32.3330 (var = 4.0471)
+LMI score (AEMINE) for rho = 0.3785: 0.1356
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 475.3473 seconds
+Time taken for LMI score (AEMINE) calculation: 16.1598 seconds
+Average score for rho = 0.4054: 32.4947 (var = 4.1231)
+LMI score (AEMINE) for rho = 0.4054: 0.2755
+Running experiment with rho = 0.4269
+Time taken for score calculation over 5000 iterations: 476.0005 seconds
+Time taken for LMI score (AEMINE) calculation: 16.4171 seconds
+Average score for rho = 0.4269: 32.5646 (var = 3.9645)
+LMI score (AEMINE) for rho = 0.4269: 0.3150
+Running experiment with rho = 0.4439
+Time taken for score calculation over 5000 iterations: 482.6704 seconds
+Time taken for LMI score (AEMINE) calculation: 15.6758 seconds
+Average score for rho = 0.4439: 32.6292 (var = 3.7579)
+LMI score (AEMINE) for rho = 0.4439: 0.3720
+Running experiment with rho = 0.4604
+Time taken for score calculation over 5000 iterations: 460.5539 seconds
+Time taken for LMI score (AEMINE) calculation: 16.8148 seconds
+Average score for rho = 0.4604: 32.7547 (var = 3.5543)
+LMI score (AEMINE) for rho = 0.4604: 0.4989
+Running experiment with rho = 0.4734
+Time taken for score calculation over 5000 iterations: 472.9578 seconds
+Time taken for LMI score (AEMINE) calculation: 16.6949 seconds
+Average score for rho = 0.4734: 32.7994 (var = 3.5261)
+LMI score (AEMINE) for rho = 0.4734: 0.6571
+Running experiment with rho = 0.4841
+Time taken for score calculation over 5000 iterations: 475.3646 seconds
+Time taken for LMI score (AEMINE) calculation: 22.1713 seconds
+Average score for rho = 0.4841: 32.8709 (var = 3.5203)
+LMI score (AEMINE) for rho = 0.4841: 0.7122
+Running experiment with rho = 0.4963
+Time taken for score calculation over 5000 iterations: 470.8729 seconds
+Time taken for LMI score (AEMINE) calculation: 18.8985 seconds
+Average score for rho = 0.4963: 32.8651 (var = 3.4314)
+LMI score (AEMINE) for rho = 0.4963: 0.8430
+Running experiment with rho = 0.5
+Time taken for score calculation over 5000 iterations: 475.0401 seconds
+Time taken for LMI score (AEMINE) calculation: 16.9206 seconds
+Average score for rho = 0.5: 32.9287 (var = 3.2322)
+LMI score (AEMINE) for rho = 0.5: 0.7810
+Kendall's Tau of average scores for repetition 1/1: 0.9556
+Kendall's Tau of LMI scores (AEMINE) for repetition 1/1: 0.9556
+
+Final Results:
+Average Kendall's Tau of average scores over 1 repetitions: 0.9556 (var = 0.0000)
+Average Kendall's Tau of LMI scores (AEMINE) over 1 repetitions: 0.9556 (var = 0.0000)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 32.1807, var = 0.0000
+  rho = 0.3418: avg_lmi_aemine = 0.0347, var_lmi_aemine = 0.0000
+  rho = 0.3785: avg = 32.3330, var = 0.0000
+  rho = 0.3785: avg_lmi_aemine = 0.1356, var_lmi_aemine = 0.0000
+  rho = 0.4054: avg = 32.4947, var = 0.0000
+  rho = 0.4054: avg_lmi_aemine = 0.2755, var_lmi_aemine = 0.0000
+  rho = 0.4269: avg = 32.5646, var = 0.0000
+  rho = 0.4269: avg_lmi_aemine = 0.3150, var_lmi_aemine = 0.0000
+  rho = 0.4439: avg = 32.6292, var = 0.0000
+  rho = 0.4439: avg_lmi_aemine = 0.3720, var_lmi_aemine = 0.0000
+  rho = 0.4604: avg = 32.7547, var = 0.0000
+  rho = 0.4604: avg_lmi_aemine = 0.4989, var_lmi_aemine = 0.0000
+  rho = 0.4734: avg = 32.7994, var = 0.0000
+  rho = 0.4734: avg_lmi_aemine = 0.6571, var_lmi_aemine = 0.0000
+  rho = 0.4841: avg = 32.8709, var = 0.0000
+  rho = 0.4841: avg_lmi_aemine = 0.7122, var_lmi_aemine = 0.0000
+  rho = 0.4963: avg = 32.8651, var = 0.0000
+  rho = 0.4963: avg_lmi_aemine = 0.8430, var_lmi_aemine = 0.0000
+  rho = 0.5: avg = 32.9287, var = 0.0000
+  rho = 0.5: avg_lmi_aemine = 0.7810, var_lmi_aemine = 0.0000
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 468.1835 seconds
+Time taken for LMI score (AEMINE) calculation: 21.9806 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 477.9924 seconds
+Time taken for LMI score (AEMINE) calculation: 22.1020 seconds
+Average score for rho = 0.3418: 32.1194 (var = 4.1881)
+LMI score (AEMINE) for rho = 0.3418: 0.0554
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 487.6372 seconds
+Time taken for LMI score (AEMINE) calculation: 22.5006 seconds
+Average score for rho = 0.3785: 32.3250 (var = 4.0585)
+LMI score (AEMINE) for rho = 0.3785: 0.1079
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 503.1764 seconds
+Time taken for LMI score (AEMINE) calculation: 21.8729 seconds
+Average score for rho = 0.4054: 32.4856 (var = 4.0811)
+LMI score (AEMINE) for rho = 0.4054: 0.1785
+Running experiment with rho = 0.4269
+Time taken for score calculation over 5000 iterations: 491.5545 seconds
+Time taken for LMI score (AEMINE) calculation: 22.3077 seconds
+Average score for rho = 0.4269: 32.5769 (var = 3.8875)
+LMI score (AEMINE) for rho = 0.4269: 0.2830
+Running experiment with rho = 0.4439
+Time taken for score calculation over 5000 iterations: 498.7685 seconds
+Time taken for LMI score (AEMINE) calculation: 22.2051 seconds
+Average score for rho = 0.4439: 32.6607 (var = 3.9901)
+LMI score (AEMINE) for rho = 0.4439: 0.3285
+Running experiment with rho = 0.4604
+Time taken for score calculation over 5000 iterations: 467.3550 seconds
+Time taken for LMI score (AEMINE) calculation: 22.5227 seconds
+Average score for rho = 0.4604: 32.7205 (var = 3.6495)
+LMI score (AEMINE) for rho = 0.4604: 0.4581
+Running experiment with rho = 0.4734
+Time taken for score calculation over 5000 iterations: 471.7715 seconds
+Time taken for LMI score (AEMINE) calculation: 21.8867 seconds
+Average score for rho = 0.4734: 32.7829 (var = 3.4868)
+LMI score (AEMINE) for rho = 0.4734: 0.5727
+Running experiment with rho = 0.4841
+Time taken for score calculation over 5000 iterations: 475.5374 seconds
+Time taken for LMI score (AEMINE) calculation: 21.8823 seconds
+Average score for rho = 0.4841: 32.8289 (var = 3.5180)
+LMI score (AEMINE) for rho = 0.4841: 0.6585
+Running experiment with rho = 0.4963
+Time taken for score calculation over 5000 iterations: 475.4757 seconds
+Time taken for LMI score (AEMINE) calculation: 22.0551 seconds
+Average score for rho = 0.4963: 32.9608 (var = 3.3600)
+LMI score (AEMINE) for rho = 0.4963: 0.7110
+Running experiment with rho = 0.5
+Time taken for score calculation over 5000 iterations: 465.1325 seconds
+Time taken for LMI score (AEMINE) calculation: 21.8714 seconds
+Average score for rho = 0.5: 32.9276 (var = 3.4720)
+LMI score (AEMINE) for rho = 0.5: 0.7880
+Kendall's Tau of average scores for repetition 1/1: 0.9556
+Kendall's Tau of LMI scores (AEMINE) for repetition 1/1: 1.0000
+
+Final Results:
+Average Kendall's Tau of average scores over 1 repetitions: 0.9556 (var = 0.0000)
+Average Kendall's Tau of LMI scores (AEMINE) over 1 repetitions: 1.0000 (var = 0.0000)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 32.1194, var = 0.0000
+  rho = 0.3418: avg_lmi_aemine = 0.0554, var_lmi_aemine = 0.0000
+  rho = 0.3785: avg = 32.3250, var = 0.0000
+  rho = 0.3785: avg_lmi_aemine = 0.1079, var_lmi_aemine = 0.0000
+  rho = 0.4054: avg = 32.4856, var = 0.0000
+  rho = 0.4054: avg_lmi_aemine = 0.1785, var_lmi_aemine = 0.0000
+  rho = 0.4269: avg = 32.5769, var = 0.0000
+  rho = 0.4269: avg_lmi_aemine = 0.2830, var_lmi_aemine = 0.0000
+  rho = 0.4439: avg = 32.6607, var = 0.0000
+  rho = 0.4439: avg_lmi_aemine = 0.3285, var_lmi_aemine = 0.0000
+  rho = 0.4604: avg = 32.7205, var = 0.0000
+  rho = 0.4604: avg_lmi_aemine = 0.4581, var_lmi_aemine = 0.0000
+  rho = 0.4734: avg = 32.7829, var = 0.0000
+  rho = 0.4734: avg_lmi_aemine = 0.5727, var_lmi_aemine = 0.0000
+  rho = 0.4841: avg = 32.8289, var = 0.0000
+  rho = 0.4841: avg_lmi_aemine = 0.6585, var_lmi_aemine = 0.0000
+  rho = 0.4963: avg = 32.9608, var = 0.0000
+  rho = 0.4963: avg_lmi_aemine = 0.7110, var_lmi_aemine = 0.0000
+  rho = 0.5: avg = 32.9276, var = 0.0000
+  rho = 0.5: avg_lmi_aemine = 0.7880, var_lmi_aemine = 0.0000
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 465.5618 seconds
+Time taken for LMI score (AEMINE) calculation: 22.0019 seconds
+Average score for rho = 0.3418: 32.1722 (var = 4.2075)
+LMI score (AEMINE) for rho = 0.3418: 0.0554
+Running experiment with rho = 0.3785
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 465.2021 seconds
+Time taken for LMI score (AEMINE) calculation: 30.2952 seconds
+Average score for rho = 0.3418: 32.1576 (var = 4.2123)
+LMI score (AEMINE) for rho = 0.3418: -0.0704
+Running experiment with rho = 0.3785
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 4.9845 seconds
+Time taken for LMI score (AEMINE) calculation: 29.8640 seconds
+Average score for rho = 0.3418: nan (var = nan)
+LMI score (AEMINE) for rho = 0.3418: -0.1008
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 4.6671 seconds
+Time taken for LMI score (AEMINE) calculation: 30.5733 seconds
+Average score for rho = 0.3785: nan (var = nan)
+LMI score (AEMINE) for rho = 0.3785: -0.0075
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 4.4308 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 5000 iterations: 459.8041 seconds
+Time taken for LMI score (AEMINE) calculation: 30.5922 seconds
+Average score for rho = 0.3418: 32.1910 (var = 4.2915)
+LMI score (AEMINE) for rho = 0.3418: -0.0150
+Running experiment with rho = 0.3785
+Time taken for score calculation over 5000 iterations: 460.4399 seconds
+Time taken for LMI score (AEMINE) calculation: 28.9791 seconds
+Average score for rho = 0.3785: 32.2930 (var = 3.9685)
+LMI score (AEMINE) for rho = 0.3785: -0.0541
+Running experiment with rho = 0.4054
+Time taken for score calculation over 5000 iterations: 469.7317 seconds
+Time taken for LMI score (AEMINE) calculation: 30.0065 seconds
+Average score for rho = 0.4054: 32.4326 (var = 3.9448)
+LMI score (AEMINE) for rho = 0.4054: -0.0185
+Running experiment with rho = 0.4269
+Time taken for score calculation over 5000 iterations: 474.5914 seconds
+Time taken for LMI score (AEMINE) calculation: 29.4267 seconds
+Average score for rho = 0.4269: 32.5572 (var = 3.8855)
+LMI score (AEMINE) for rho = 0.4269: 0.0371
+Running experiment with rho = 0.4439
+Time taken for score calculation over 5000 iterations: 474.6508 seconds
+Time taken for LMI score (AEMINE) calculation: 30.2083 seconds
+Average score for rho = 0.4439: 32.6382 (var = 3.7481)
+LMI score (AEMINE) for rho = 0.4439: 0.0523
+Running experiment with rho = 0.4604
+Time taken for score calculation over 5000 iterations: 471.5674 seconds
+Time taken for LMI score (AEMINE) calculation: 31.2597 seconds
+Average score for rho = 0.4604: 32.7364 (var = 3.7053)
+LMI score (AEMINE) for rho = 0.4604: 0.0907
+Running experiment with rho = 0.4734
+Time taken for score calculation over 5000 iterations: 472.2083 seconds
+Time taken for LMI score (AEMINE) calculation: 30.6153 seconds
+Average score for rho = 0.4734: 32.8088 (var = 3.5412)
+LMI score (AEMINE) for rho = 0.4734: 0.0777
+Running experiment with rho = 0.4841
+Time taken for score calculation over 5000 iterations: 468.7761 seconds
+Time taken for LMI score (AEMINE) calculation: 30.9410 seconds
+Average score for rho = 0.4841: 32.8455 (var = 3.5409)
+LMI score (AEMINE) for rho = 0.4841: 0.1096
+Running experiment with rho = 0.4963
+Time taken for score calculation over 5000 iterations: 470.6831 seconds
+Time taken for LMI score (AEMINE) calculation: 32.2199 seconds
+Average score for rho = 0.4963: 32.9438 (var = 3.4977)
+LMI score (AEMINE) for rho = 0.4963: 0.2683
+Running experiment with rho = 0.5
+Time taken for score calculation over 5000 iterations: 482.9798 seconds
+Time taken for LMI score (AEMINE) calculation: 30.3457 seconds
+Average score for rho = 0.5: 32.9185 (var = 3.3048)
+LMI score (AEMINE) for rho = 0.5: 0.2148
+Kendall's Tau of average scores for repetition 1/1: 0.9556
+Kendall's Tau of LMI scores (AEMINE) for repetition 1/1: 0.8222
+
+Final Results:
+Average Kendall's Tau of average scores over 1 repetitions: 0.9556 (var = 0.0000)
+Average Kendall's Tau of LMI scores (AEMINE) over 1 repetitions: 0.8222 (var = 0.0000)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 32.1910, var = 0.0000
+  rho = 0.3418: avg_lmi_aemine = -0.0150, var_lmi_aemine = 0.0000
+  rho = 0.3785: avg = 32.2930, var = 0.0000
+  rho = 0.3785: avg_lmi_aemine = -0.0541, var_lmi_aemine = 0.0000
+  rho = 0.4054: avg = 32.4326, var = 0.0000
+  rho = 0.4054: avg_lmi_aemine = -0.0185, var_lmi_aemine = 0.0000
+  rho = 0.4269: avg = 32.5572, var = 0.0000
+  rho = 0.4269: avg_lmi_aemine = 0.0371, var_lmi_aemine = 0.0000
+  rho = 0.4439: avg = 32.6382, var = 0.0000
+  rho = 0.4439: avg_lmi_aemine = 0.0523, var_lmi_aemine = 0.0000
+  rho = 0.4604: avg = 32.7364, var = 0.0000
+  rho = 0.4604: avg_lmi_aemine = 0.0907, var_lmi_aemine = 0.0000
+  rho = 0.4734: avg = 32.8088, var = 0.0000
+  rho = 0.4734: avg_lmi_aemine = 0.0777, var_lmi_aemine = 0.0000
+  rho = 0.4841: avg = 32.8455, var = 0.0000
+  rho = 0.4841: avg_lmi_aemine = 0.1096, var_lmi_aemine = 0.0000
+  rho = 0.4963: avg = 32.9438, var = 0.0000
+  rho = 0.4963: avg_lmi_aemine = 0.2683, var_lmi_aemine = 0.0000
+  rho = 0.5: avg = 32.9185, var = 0.0000
+  rho = 0.5: avg_lmi_aemine = 0.2148, var_lmi_aemine = 0.0000

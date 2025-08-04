@@ -1,0 +1,18 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10000 iterations: 0.0000 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10000 iterations: 9.7107 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10000 iterations: 9.7181 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10000 iterations: 9.9854 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10000 iterations: 9.8077 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10000 iterations: 10.0121 seconds

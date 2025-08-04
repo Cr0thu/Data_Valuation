@@ -1,0 +1,3 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10 iterations: 0.0308 seconds

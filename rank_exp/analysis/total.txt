@@ -1,0 +1,24 @@
+Final Results:
+Average Spearman's Rho of average scores over 20 repetitions: 0.9758 (var = 0.0003)
+Average Spearman's Rho of LMI scores (AEMINE) over 20 repetitions: 0.6339 (var = 0.0330)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 29.3884, var = 0.0022
+  rho = 0.3418: avg_lmi_aemine = -0.0574, var_lmi_aemine = 0.0033
+  rho = 0.3785: avg = 29.5242, var = 0.0018
+  rho = 0.3785: avg_lmi_aemine = -0.0406, var_lmi_aemine = 0.0025
+  rho = 0.4054: avg = 29.6211, var = 0.0023
+  rho = 0.4054: avg_lmi_aemine = -0.0244, var_lmi_aemine = 0.0012
+  rho = 0.4269: avg = 29.7400, var = 0.0018
+  rho = 0.4269: avg_lmi_aemine = -0.0150, var_lmi_aemine = 0.0024
+  rho = 0.4439: avg = 29.8049, var = 0.0018
+  rho = 0.4439: avg_lmi_aemine = -0.0011, var_lmi_aemine = 0.0022
+  rho = 0.4604: avg = 29.8632, var = 0.0014
+  rho = 0.4604: avg_lmi_aemine = 0.0149, var_lmi_aemine = 0.0023
+  rho = 0.4734: avg = 29.9389, var = 0.0018
+  rho = 0.4734: avg_lmi_aemine = 0.0394, var_lmi_aemine = 0.0045
+  rho = 0.4841: avg = 29.9927, var = 0.0017
+  rho = 0.4841: avg_lmi_aemine = 0.0366, var_lmi_aemine = 0.0038
+  rho = 0.4963: avg = 30.0439, var = 0.0024
+  rho = 0.4963: avg_lmi_aemine = 0.0801, var_lmi_aemine = 0.0048
+  rho = 0.5: avg = 30.0545, var = 0.0007
+  rho = 0.5: avg_lmi_aemine = 0.0888, var_lmi_aemine = 0.0040

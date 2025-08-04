@@ -1,0 +1,14 @@
+
+Final Results:
+Average Spearman's Rho of LMI scores (AEMINE) over 20 repetitions: 0.7648 (var = 0.0174)
+Average scores and variances for each rho:
+  rho = 0.3418: avg_lmi_aemine = 0.0936, var_lmi_aemine = 0.0015
+  rho = 0.3785: avg_lmi_aemine = 0.1500, var_lmi_aemine = 0.0012
+  rho = 0.4054: avg_lmi_aemine = 0.1500, var_lmi_aemine = 0.0020
+  rho = 0.4269: avg_lmi_aemine = 0.1841, var_lmi_aemine = 0.0010
+  rho = 0.4439: avg_lmi_aemine = 0.2020, var_lmi_aemine = 0.0018
+  rho = 0.4604: avg_lmi_aemine = 0.2308, var_lmi_aemine = 0.0016
+  rho = 0.4734: avg_lmi_aemine = 0.2329, var_lmi_aemine = 0.0027
+  rho = 0.4841: avg_lmi_aemine = 0.2444, var_lmi_aemine = 0.0023
+  rho = 0.4963: avg_lmi_aemine = 0.2797, var_lmi_aemine = 0.0021
+  rho = 0.5: avg_lmi_aemine = 0.2755, var_lmi_aemine = 0.0027

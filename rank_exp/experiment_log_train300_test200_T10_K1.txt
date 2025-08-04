@@ -1,0 +1,22 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Average score for rho = 0.3418: 74.2671 (var = 63.8254)
+Running experiment with rho = 0.3785
+Average score for rho = 0.3785: 68.2432 (var = 41.8159)
+Running experiment with rho = 0.4054
+Average score for rho = 0.4054: 71.1444 (var = 41.1706)
+Running experiment with rho = 0.4269
+Average score for rho = 0.4269: 73.2772 (var = 36.4394)
+Running experiment with rho = 0.4439
+Average score for rho = 0.4439: 71.6436 (var = 39.4733)
+Running experiment with rho = 0.4604
+Average score for rho = 0.4604: 73.3781 (var = 50.7538)
+Running experiment with rho = 0.4734
+Average score for rho = 0.4734: 67.3183 (var = 17.8506)
+Running experiment with rho = 0.4841
+Average score for rho = 0.4841: 73.7868 (var = 78.7054)
+Running experiment with rho = 0.4963
+Average score for rho = 0.4963: 69.4507 (var = 31.0628)
+Running experiment with rho = 0.5
+Average score for rho = 0.5: 75.8633 (var = 50.0213)
+Kendall's Tau for repetition 1/1: 0.1556

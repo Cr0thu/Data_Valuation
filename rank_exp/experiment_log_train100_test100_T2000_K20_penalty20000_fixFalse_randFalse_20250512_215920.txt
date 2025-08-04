@@ -1,0 +1,526 @@
+Running experiment repetition 1/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 213.1099 seconds
+Average score for rho = 0.3418: 30.7286 (var = 4.5757)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 213.1977 seconds
+Average score for rho = 0.3785: 30.8974 (var = 4.2433)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 211.1037 seconds
+Average score for rho = 0.4054: 31.1064 (var = 4.3997)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 211.9007 seconds
+Average score for rho = 0.4269: 31.0311 (var = 4.1571)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 264.9870 seconds
+Average score for rho = 0.4439: 31.1325 (var = 4.0792)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 273.5116 seconds
+Average score for rho = 0.4604: 31.3475 (var = 4.1734)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 274.0892 seconds
+Average score for rho = 0.4734: 31.3216 (var = 3.8691)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 262.8082 seconds
+Average score for rho = 0.4841: 31.3116 (var = 4.0710)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 272.1975 seconds
+Average score for rho = 0.4963: 31.4338 (var = 3.8442)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 268.6002 seconds
+Average score for rho = 0.5: 31.5042 (var = 3.9672)
+Spearman's Rho of average scores for repetition 1/20: 0.9394
+Running experiment repetition 2/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 272.1057 seconds
+Average score for rho = 0.3418: 30.8046 (var = 4.4588)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 264.4906 seconds
+Average score for rho = 0.3785: 30.9119 (var = 4.4891)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 267.3102 seconds
+Average score for rho = 0.4054: 31.0275 (var = 4.1992)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 259.1104 seconds
+Average score for rho = 0.4269: 31.0850 (var = 4.3279)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 198.9090 seconds
+Average score for rho = 0.4439: 31.1687 (var = 4.2901)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 202.7946 seconds
+Average score for rho = 0.4604: 31.2734 (var = 4.0996)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 203.8991 seconds
+Average score for rho = 0.4734: 31.2982 (var = 3.9694)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 201.5993 seconds
+Average score for rho = 0.4841: 31.4005 (var = 3.8343)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 207.3038 seconds
+Average score for rho = 0.4963: 31.4617 (var = 3.9386)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 211.0939 seconds
+Average score for rho = 0.5: 31.3729 (var = 3.8376)
+Spearman's Rho of average scores for repetition 2/20: 0.9636
+Running experiment repetition 3/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 209.1022 seconds
+Average score for rho = 0.3418: 30.7143 (var = 4.6157)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 209.7991 seconds
+Average score for rho = 0.3785: 30.8741 (var = 4.2370)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 198.8998 seconds
+Average score for rho = 0.4054: 31.0442 (var = 4.2003)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 197.5141 seconds
+Average score for rho = 0.4269: 31.1497 (var = 4.2681)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 203.9935 seconds
+Average score for rho = 0.4439: 31.1698 (var = 4.3669)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 190.0002 seconds
+Average score for rho = 0.4604: 31.2828 (var = 4.0833)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 194.6943 seconds
+Average score for rho = 0.4734: 31.3473 (var = 3.9536)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 207.9027 seconds
+Average score for rho = 0.4841: 31.3638 (var = 3.9626)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 201.2912 seconds
+Average score for rho = 0.4963: 31.4688 (var = 3.7562)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 199.0016 seconds
+Average score for rho = 0.5: 31.4785 (var = 3.7562)
+Spearman's Rho of average scores for repetition 3/20: 1.0000
+Running experiment repetition 4/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 209.7023 seconds
+Average score for rho = 0.3418: 30.7219 (var = 4.3717)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 208.0992 seconds
+Average score for rho = 0.3785: 30.8994 (var = 4.4240)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 205.2049 seconds
+Average score for rho = 0.4054: 30.9899 (var = 4.2624)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 207.9042 seconds
+Average score for rho = 0.4269: 31.1194 (var = 4.3532)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 208.5902 seconds
+Average score for rho = 0.4439: 31.1727 (var = 4.2112)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 214.8071 seconds
+Average score for rho = 0.4604: 31.3110 (var = 4.0677)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 215.9994 seconds
+Average score for rho = 0.4734: 31.3786 (var = 4.1042)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 211.8900 seconds
+Average score for rho = 0.4841: 31.3703 (var = 3.7555)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 211.6053 seconds
+Average score for rho = 0.4963: 31.3716 (var = 4.1232)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 208.7945 seconds
+Average score for rho = 0.5: 31.3801 (var = 3.9449)
+Spearman's Rho of average scores for repetition 4/20: 0.9636
+Running experiment repetition 5/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 211.5049 seconds
+Average score for rho = 0.3418: 30.7651 (var = 4.6941)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 214.2078 seconds
+Average score for rho = 0.3785: 30.8286 (var = 4.2553)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 198.8986 seconds
+Average score for rho = 0.4054: 31.0584 (var = 4.3352)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 206.5996 seconds
+Average score for rho = 0.4269: 31.0970 (var = 4.3310)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 208.8067 seconds
+Average score for rho = 0.4439: 31.2442 (var = 4.1046)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 204.2980 seconds
+Average score for rho = 0.4604: 31.2125 (var = 4.1114)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 202.0015 seconds
+Average score for rho = 0.4734: 31.3581 (var = 3.8293)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 194.4959 seconds
+Average score for rho = 0.4841: 31.3554 (var = 4.0098)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 206.9029 seconds
+Average score for rho = 0.4963: 31.4550 (var = 3.7660)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 202.1917 seconds
+Average score for rho = 0.5: 31.4493 (var = 3.7645)
+Spearman's Rho of average scores for repetition 5/20: 0.9636
+Running experiment repetition 6/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 206.6982 seconds
+Average score for rho = 0.3418: 30.6352 (var = 4.4298)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 203.7037 seconds
+Average score for rho = 0.3785: 30.9656 (var = 4.5332)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 207.0950 seconds
+Average score for rho = 0.4054: 31.0864 (var = 4.4992)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 213.3982 seconds
+Average score for rho = 0.4269: 31.1871 (var = 4.2588)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 209.4990 seconds
+Average score for rho = 0.4439: 31.2227 (var = 4.4408)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 208.1995 seconds
+Average score for rho = 0.4604: 31.3113 (var = 4.0337)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 207.1994 seconds
+Average score for rho = 0.4734: 31.3630 (var = 4.0074)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 278.8895 seconds
+Average score for rho = 0.4841: 31.3368 (var = 4.0212)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 266.5043 seconds
+Average score for rho = 0.4963: 31.4025 (var = 3.8083)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 259.1022 seconds
+Average score for rho = 0.5: 31.4018 (var = 3.8349)
+Spearman's Rho of average scores for repetition 6/20: 0.9758
+Running experiment repetition 7/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 256.5091 seconds
+Average score for rho = 0.3418: 30.7590 (var = 4.4137)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 250.2988 seconds
+Average score for rho = 0.3785: 30.8528 (var = 4.3738)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 260.0948 seconds
+Average score for rho = 0.4054: 31.0549 (var = 4.3964)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 267.5945 seconds
+Average score for rho = 0.4269: 31.1124 (var = 4.3688)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 269.1988 seconds
+Average score for rho = 0.4439: 31.1717 (var = 4.0479)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 251.6026 seconds
+Average score for rho = 0.4604: 31.2712 (var = 4.0861)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 246.9009 seconds
+Average score for rho = 0.4734: 31.2844 (var = 3.8905)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 272.0982 seconds
+Average score for rho = 0.4841: 31.3362 (var = 3.8014)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 260.3970 seconds
+Average score for rho = 0.4963: 31.4195 (var = 3.9648)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 266.1011 seconds
+Average score for rho = 0.5: 31.4884 (var = 3.7437)
+Spearman's Rho of average scores for repetition 7/20: 1.0000
+Running experiment repetition 8/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 288.6988 seconds
+Average score for rho = 0.3418: 30.7917 (var = 4.5789)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 275.7980 seconds
+Average score for rho = 0.3785: 30.9093 (var = 4.4312)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 246.4947 seconds
+Average score for rho = 0.4054: 31.0757 (var = 4.3178)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 257.9063 seconds
+Average score for rho = 0.4269: 31.1606 (var = 4.3391)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 272.9918 seconds
+Average score for rho = 0.4439: 31.1927 (var = 4.1645)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 267.4990 seconds
+Average score for rho = 0.4604: 31.3021 (var = 4.1231)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 246.8081 seconds
+Average score for rho = 0.4734: 31.3181 (var = 4.0799)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 264.3018 seconds
+Average score for rho = 0.4841: 31.4297 (var = 3.8510)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 271.3987 seconds
+Average score for rho = 0.4963: 31.3905 (var = 3.8278)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 281.7993 seconds
+Average score for rho = 0.5: 31.4929 (var = 3.7359)
+Spearman's Rho of average scores for repetition 8/20: 0.9879
+Running experiment repetition 9/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 256.9022 seconds
+Average score for rho = 0.3418: 30.7630 (var = 4.3911)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 262.2080 seconds
+Average score for rho = 0.3785: 30.9549 (var = 4.6486)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 275.3939 seconds
+Average score for rho = 0.4054: 31.0839 (var = 4.4411)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 265.4911 seconds
+Average score for rho = 0.4269: 31.1636 (var = 4.1977)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 254.1080 seconds
+Average score for rho = 0.4439: 31.1241 (var = 4.1225)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 254.5965 seconds
+Average score for rho = 0.4604: 31.3338 (var = 3.9904)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 261.3931 seconds
+Average score for rho = 0.4734: 31.3259 (var = 4.0908)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 270.8000 seconds
+Average score for rho = 0.4841: 31.3841 (var = 3.9688)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 259.7068 seconds
+Average score for rho = 0.4963: 31.3528 (var = 3.7235)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 244.8922 seconds
+Average score for rho = 0.5: 31.4809 (var = 3.8207)
+Spearman's Rho of average scores for repetition 9/20: 0.9636
+Running experiment repetition 10/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 239.5037 seconds
+Average score for rho = 0.3418: 30.7676 (var = 4.2771)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 256.5879 seconds
+Average score for rho = 0.3785: 30.8807 (var = 4.6219)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 280.0011 seconds
+Average score for rho = 0.4054: 31.0915 (var = 4.2854)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 271.5078 seconds
+Average score for rho = 0.4269: 31.2179 (var = 4.1121)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 267.4906 seconds
+Average score for rho = 0.4439: 31.1683 (var = 4.1529)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 279.7008 seconds
+Average score for rho = 0.4604: 31.2632 (var = 3.8496)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 274.9020 seconds
+Average score for rho = 0.4734: 31.2553 (var = 4.0034)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 268.9980 seconds
+Average score for rho = 0.4841: 31.3597 (var = 3.9353)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 251.0039 seconds
+Average score for rho = 0.4963: 31.4208 (var = 3.6851)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 268.8970 seconds
+Average score for rho = 0.5: 31.3996 (var = 3.8405)
+Spearman's Rho of average scores for repetition 10/20: 0.9636
+Running experiment repetition 11/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 267.1092 seconds
+Average score for rho = 0.3418: 30.6868 (var = 4.3998)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 254.3923 seconds
+Average score for rho = 0.3785: 30.9066 (var = 4.5258)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 269.5997 seconds
+Average score for rho = 0.4054: 31.0812 (var = 4.1694)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 256.5036 seconds
+Average score for rho = 0.4269: 31.1459 (var = 4.2965)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 282.2958 seconds
+Average score for rho = 0.4439: 31.2354 (var = 4.1630)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 242.3043 seconds
+Average score for rho = 0.4604: 31.3664 (var = 4.0520)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 209.7983 seconds
+Average score for rho = 0.4734: 31.3396 (var = 4.1349)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 207.6055 seconds
+Average score for rho = 0.4841: 31.3763 (var = 3.8450)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 211.4945 seconds
+Average score for rho = 0.4963: 31.4252 (var = 3.7294)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 26809.3002 seconds
+Average score for rho = 0.5: 31.4500 (var = 3.7120)
+Spearman's Rho of average scores for repetition 11/20: 0.9879
+Running experiment repetition 12/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 195.9034 seconds
+Average score for rho = 0.3418: 30.7315 (var = 4.5056)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 201.9999 seconds
+Average score for rho = 0.3785: 30.9540 (var = 4.4138)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 204.7931 seconds
+Average score for rho = 0.4054: 31.0229 (var = 4.2823)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 207.0046 seconds
+Average score for rho = 0.4269: 31.3036 (var = 4.3635)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 203.9997 seconds
+Average score for rho = 0.4439: 31.1607 (var = 4.2662)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 236.4001 seconds
+Average score for rho = 0.4604: 31.2848 (var = 4.2354)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 191.9950 seconds
+Average score for rho = 0.4734: 31.2797 (var = 4.1271)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 181.4953 seconds
+Average score for rho = 0.4841: 31.4217 (var = 3.9774)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 198.8049 seconds
+Average score for rho = 0.4963: 31.4941 (var = 4.0323)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 206.7998 seconds
+Average score for rho = 0.5: 31.4170 (var = 3.8744)
+Spearman's Rho of average scores for repetition 12/20: 0.8788
+Running experiment repetition 13/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 189.9030 seconds
+Average score for rho = 0.3418: 30.7457 (var = 4.5558)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 222.5969 seconds
+Average score for rho = 0.3785: 30.7559 (var = 4.5907)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 272.3993 seconds
+Average score for rho = 0.4054: 31.0172 (var = 4.5042)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 239.7031 seconds
+Average score for rho = 0.4269: 31.1066 (var = 4.2391)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 258.1942 seconds
+Average score for rho = 0.4439: 31.2699 (var = 4.4150)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 254.9083 seconds
+Average score for rho = 0.4604: 31.2859 (var = 4.1020)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 245.9153 seconds
+Average score for rho = 0.4734: 31.3621 (var = 3.7734)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 246.1019 seconds
+Average score for rho = 0.4841: 31.3930 (var = 4.0043)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 263.8987 seconds
+Average score for rho = 0.4963: 31.3979 (var = 3.8494)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 273.5991 seconds
+Average score for rho = 0.5: 31.5194 (var = 3.7179)
+Spearman's Rho of average scores for repetition 13/20: 1.0000
+Running experiment repetition 14/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 1057.7949 seconds
+Average score for rho = 0.3418: 30.7694 (var = 4.3982)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 256.5095 seconds
+Average score for rho = 0.3785: 30.9329 (var = 4.4164)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 269.7907 seconds
+Average score for rho = 0.4054: 31.0823 (var = 4.2984)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 267.4086 seconds
+Average score for rho = 0.4269: 31.0600 (var = 4.3243)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 269.0939 seconds
+Average score for rho = 0.4439: 31.2376 (var = 4.0686)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 259.0943 seconds
+Average score for rho = 0.4604: 31.2479 (var = 4.2386)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 275.5990 seconds
+Average score for rho = 0.4734: 31.3647 (var = 4.1433)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 274.9065 seconds
+Average score for rho = 0.4841: 31.3211 (var = 3.9604)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 270.9913 seconds
+Average score for rho = 0.4963: 31.4290 (var = 3.9625)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 278.1089 seconds
+Average score for rho = 0.5: 31.5340 (var = 3.8704)
+Spearman's Rho of average scores for repetition 14/20: 0.9758
+Running experiment repetition 15/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 270.9897 seconds
+Average score for rho = 0.3418: 30.8298 (var = 4.6872)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 277.0058 seconds
+Average score for rho = 0.3785: 30.9886 (var = 4.4284)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 268.0902 seconds
+Average score for rho = 0.4054: 30.9770 (var = 4.3566)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 256.6101 seconds
+Average score for rho = 0.4269: 31.1418 (var = 4.3054)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 260.5961 seconds
+Average score for rho = 0.4439: 31.2011 (var = 4.1479)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 275.2907 seconds
+Average score for rho = 0.4604: 31.2522 (var = 4.1638)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 259.1985 seconds
+Average score for rho = 0.4734: 31.3290 (var = 4.1127)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 263.4096 seconds
+Average score for rho = 0.4841: 31.4333 (var = 3.9575)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 262.9934 seconds
+Average score for rho = 0.4963: 31.4811 (var = 3.7784)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 219.6984 seconds
+Average score for rho = 0.5: 31.4184 (var = 4.0176)
+Spearman's Rho of average scores for repetition 15/20: 0.9515
+Running experiment repetition 16/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 255.4962 seconds
+Average score for rho = 0.3418: 30.7084 (var = 4.3826)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 261.0101 seconds
+Average score for rho = 0.3785: 30.9635 (var = 4.3319)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 270.8936 seconds
+Average score for rho = 0.4054: 30.9958 (var = 4.5977)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 277.2018 seconds
+Average score for rho = 0.4269: 31.0890 (var = 4.2500)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 2000 iterations: 273.7039 seconds
+Average score for rho = 0.4439: 31.1765 (var = 3.9041)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 2000 iterations: 266.0974 seconds
+Average score for rho = 0.4604: 31.3377 (var = 3.9216)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 2000 iterations: 5072.1926 seconds
+Average score for rho = 0.4734: 31.3557 (var = 3.9333)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 2000 iterations: 262.4102 seconds
+Average score for rho = 0.4841: 31.3954 (var = 3.8764)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 2000 iterations: 245.6967 seconds
+Average score for rho = 0.4963: 31.4479 (var = 3.9082)
+Running experiment with rho = 0.5
+Time taken for score calculation over 2000 iterations: 216.0997 seconds
+Average score for rho = 0.5: 31.4510 (var = 3.8958)
+Spearman's Rho of average scores for repetition 16/20: 1.0000
+Running experiment repetition 17/20
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 213.6976 seconds
+Average score for rho = 0.3418: 30.7764 (var = 4.1806)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 2000 iterations: 228.6906 seconds
+Average score for rho = 0.3785: 30.9865 (var = 4.4437)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 2000 iterations: 251.1082 seconds
+Average score for rho = 0.4054: 30.9919 (var = 4.3707)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 2000 iterations: 272.9005 seconds
+Average score for rho = 0.4269: 31.0790 (var = 4.2327)
+Running experiment with rho = 0.4439

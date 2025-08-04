@@ -1,0 +1,434 @@
+Running experiment repetition 1/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.6446 seconds
+Time taken for LMI score (AEMINE) calculation: 12.2857 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0195
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5537 seconds
+Time taken for LMI score (AEMINE) calculation: 17.6498 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.2226
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5823 seconds
+Time taken for LMI score (AEMINE) calculation: 16.3293 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.0794
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.6347 seconds
+Time taken for LMI score (AEMINE) calculation: 14.4949 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.1818
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.5283 seconds
+Time taken for LMI score (AEMINE) calculation: 14.7540 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.2751
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.6073 seconds
+Time taken for LMI score (AEMINE) calculation: 18.2124 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.5496
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.6474 seconds
+Time taken for LMI score (AEMINE) calculation: 17.3223 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.4539
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5353 seconds
+Time taken for LMI score (AEMINE) calculation: 16.1573 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.5766
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.6159 seconds
+Time taken for LMI score (AEMINE) calculation: 14.4864 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.6610
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.5875 seconds
+Time taken for LMI score (AEMINE) calculation: 17.3160 seconds
+LMI score (AEMINE) for rho = 0.5: 0.7752
+Spearman's Rho of LMI scores (AEMINE) for repetition 1/10: 0.9515
+Running experiment repetition 2/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.5929 seconds
+Time taken for LMI score (AEMINE) calculation: 15.0039 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0271
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5046 seconds
+Time taken for LMI score (AEMINE) calculation: 20.0087 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.0219
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5993 seconds
+Time taken for LMI score (AEMINE) calculation: 10.5881 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.1985
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.4898 seconds
+Time taken for LMI score (AEMINE) calculation: 15.4056 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.2160
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.4796 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7443 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.3200
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5455 seconds
+Time taken for LMI score (AEMINE) calculation: 14.9528 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.4908
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.4692 seconds
+Time taken for LMI score (AEMINE) calculation: 15.6301 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.5496
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5249 seconds
+Time taken for LMI score (AEMINE) calculation: 14.4825 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.4014
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5710 seconds
+Time taken for LMI score (AEMINE) calculation: 18.7339 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.5996
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.4918 seconds
+Time taken for LMI score (AEMINE) calculation: 19.0869 seconds
+LMI score (AEMINE) for rho = 0.5: 0.7042
+Spearman's Rho of LMI scores (AEMINE) for repetition 2/10: 0.9515
+Running experiment repetition 3/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.5710 seconds
+Time taken for LMI score (AEMINE) calculation: 16.4319 seconds
+LMI score (AEMINE) for rho = 0.3418: -0.0271
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5140 seconds
+Time taken for LMI score (AEMINE) calculation: 15.1915 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.1360
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.4936 seconds
+Time taken for LMI score (AEMINE) calculation: 15.0230 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.1582
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.6156 seconds
+Time taken for LMI score (AEMINE) calculation: 17.1820 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.1966
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.4752 seconds
+Time taken for LMI score (AEMINE) calculation: 15.2366 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.2965
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5560 seconds
+Time taken for LMI score (AEMINE) calculation: 18.2324 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.5236
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.4939 seconds
+Time taken for LMI score (AEMINE) calculation: 17.1163 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.5208
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5708 seconds
+Time taken for LMI score (AEMINE) calculation: 16.0249 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.6359
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5126 seconds
+Time taken for LMI score (AEMINE) calculation: 19.0730 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.6976
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.4762 seconds
+Time taken for LMI score (AEMINE) calculation: 14.6423 seconds
+LMI score (AEMINE) for rho = 0.5: 0.7120
+Spearman's Rho of LMI scores (AEMINE) for repetition 3/10: 0.9879
+Running experiment repetition 4/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.6053 seconds
+Time taken for LMI score (AEMINE) calculation: 10.4036 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0660
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.4838 seconds
+Time taken for LMI score (AEMINE) calculation: 16.6996 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.1723
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5047 seconds
+Time taken for LMI score (AEMINE) calculation: 15.5090 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.2339
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.4952 seconds
+Time taken for LMI score (AEMINE) calculation: 18.1862 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.1473
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.5884 seconds
+Time taken for LMI score (AEMINE) calculation: 15.1357 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.3380
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5727 seconds
+Time taken for LMI score (AEMINE) calculation: 18.7240 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.5581
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.5773 seconds
+Time taken for LMI score (AEMINE) calculation: 17.1112 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.4716
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.4688 seconds
+Time taken for LMI score (AEMINE) calculation: 14.1385 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.6102
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.6025 seconds
+Time taken for LMI score (AEMINE) calculation: 18.0795 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.5465
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.6097 seconds
+Time taken for LMI score (AEMINE) calculation: 16.0001 seconds
+LMI score (AEMINE) for rho = 0.5: 0.6009
+Spearman's Rho of LMI scores (AEMINE) for repetition 4/10: 0.8788
+Running experiment repetition 5/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.5108 seconds
+Time taken for LMI score (AEMINE) calculation: 17.7066 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0133
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5518 seconds
+Time taken for LMI score (AEMINE) calculation: 18.3288 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.2113
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5422 seconds
+Time taken for LMI score (AEMINE) calculation: 16.6781 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.1834
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.5013 seconds
+Time taken for LMI score (AEMINE) calculation: 18.6995 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.3802
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.6001 seconds
+Time taken for LMI score (AEMINE) calculation: 15.9849 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.3704
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5527 seconds
+Time taken for LMI score (AEMINE) calculation: 15.7354 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.5102
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.5654 seconds
+Time taken for LMI score (AEMINE) calculation: 17.2168 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.5405
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5418 seconds
+Time taken for LMI score (AEMINE) calculation: 15.3630 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.4498
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5303 seconds
+Time taken for LMI score (AEMINE) calculation: 17.9726 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.6783
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.5794 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7969 seconds
+LMI score (AEMINE) for rho = 0.5: 0.7393
+Spearman's Rho of LMI scores (AEMINE) for repetition 5/10: 0.9394
+Running experiment repetition 6/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.4963 seconds
+Time taken for LMI score (AEMINE) calculation: 15.8155 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0207
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5741 seconds
+Time taken for LMI score (AEMINE) calculation: 15.5219 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.2452
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.4847 seconds
+Time taken for LMI score (AEMINE) calculation: 16.4231 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.2664
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.4712 seconds
+Time taken for LMI score (AEMINE) calculation: 15.4289 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.2283
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.5748 seconds
+Time taken for LMI score (AEMINE) calculation: 15.1213 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.3943
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.4737 seconds
+Time taken for LMI score (AEMINE) calculation: 16.9476 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.4063
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.5556 seconds
+Time taken for LMI score (AEMINE) calculation: 15.7247 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.4086
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5698 seconds
+Time taken for LMI score (AEMINE) calculation: 17.2269 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.4760
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.4972 seconds
+Time taken for LMI score (AEMINE) calculation: 16.1932 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.7733
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.5137 seconds
+Time taken for LMI score (AEMINE) calculation: 17.4898 seconds
+LMI score (AEMINE) for rho = 0.5: 0.8491
+Spearman's Rho of LMI scores (AEMINE) for repetition 6/10: 0.9636
+Running experiment repetition 7/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.5944 seconds
+Time taken for LMI score (AEMINE) calculation: 20.0160 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.1751
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.4900 seconds
+Time taken for LMI score (AEMINE) calculation: 13.0166 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.0216
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5543 seconds
+Time taken for LMI score (AEMINE) calculation: 16.9405 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.2244
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.4827 seconds
+Time taken for LMI score (AEMINE) calculation: 18.9113 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.3149
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.5563 seconds
+Time taken for LMI score (AEMINE) calculation: 15.5632 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.4942
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5502 seconds
+Time taken for LMI score (AEMINE) calculation: 18.5385 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.4278
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.5030 seconds
+Time taken for LMI score (AEMINE) calculation: 18.3961 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.7146
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5224 seconds
+Time taken for LMI score (AEMINE) calculation: 14.7759 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.5783
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5359 seconds
+Time taken for LMI score (AEMINE) calculation: 16.7709 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.5677
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.6023 seconds
+Time taken for LMI score (AEMINE) calculation: 16.8074 seconds
+LMI score (AEMINE) for rho = 0.5: 0.8136
+Spearman's Rho of LMI scores (AEMINE) for repetition 7/10: 0.9273
+Running experiment repetition 8/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.5617 seconds
+Time taken for LMI score (AEMINE) calculation: 19.1186 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0378
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5295 seconds
+Time taken for LMI score (AEMINE) calculation: 16.6857 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.0745
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5798 seconds
+Time taken for LMI score (AEMINE) calculation: 17.0047 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.2952
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.5229 seconds
+Time taken for LMI score (AEMINE) calculation: 15.4797 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.3484
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.4994 seconds
+Time taken for LMI score (AEMINE) calculation: 15.6225 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.3885
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.4688 seconds
+Time taken for LMI score (AEMINE) calculation: 15.8342 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.3502
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.6694 seconds
+Time taken for LMI score (AEMINE) calculation: 16.8012 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.5831
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5146 seconds
+Time taken for LMI score (AEMINE) calculation: 14.8901 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.5959
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5211 seconds
+Time taken for LMI score (AEMINE) calculation: 14.7918 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.7562
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.5101 seconds
+Time taken for LMI score (AEMINE) calculation: 15.5902 seconds
+LMI score (AEMINE) for rho = 0.5: 0.8235
+Spearman's Rho of LMI scores (AEMINE) for repetition 8/10: 0.9879
+Running experiment repetition 9/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.4857 seconds
+Time taken for LMI score (AEMINE) calculation: 18.4927 seconds
+LMI score (AEMINE) for rho = 0.3418: 0.0228
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5349 seconds
+Time taken for LMI score (AEMINE) calculation: 15.3925 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.0680
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.5820 seconds
+Time taken for LMI score (AEMINE) calculation: 17.0016 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.0915
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.5673 seconds
+Time taken for LMI score (AEMINE) calculation: 13.8261 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.2172
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.5204 seconds
+Time taken for LMI score (AEMINE) calculation: 16.5696 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.2961
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5404 seconds
+Time taken for LMI score (AEMINE) calculation: 13.5771 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.5596
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.5833 seconds
+Time taken for LMI score (AEMINE) calculation: 15.0060 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.4330
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.4951 seconds
+Time taken for LMI score (AEMINE) calculation: 16.2834 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.5438
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5492 seconds
+Time taken for LMI score (AEMINE) calculation: 18.5415 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.6282
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.5328 seconds
+Time taken for LMI score (AEMINE) calculation: 16.4798 seconds
+LMI score (AEMINE) for rho = 0.5: 0.6915
+Spearman's Rho of LMI scores (AEMINE) for repetition 9/10: 0.9636
+Running experiment repetition 10/10
+Running experiment with rho = 0.3418
+Time taken for score calculation over 500 iterations: 0.6249 seconds
+Time taken for LMI score (AEMINE) calculation: 15.4802 seconds
+LMI score (AEMINE) for rho = 0.3418: -0.0232
+Running experiment with rho = 0.3785
+Time taken for score calculation over 500 iterations: 0.5345 seconds
+Time taken for LMI score (AEMINE) calculation: 17.1698 seconds
+LMI score (AEMINE) for rho = 0.3785: 0.0709
+Running experiment with rho = 0.4054
+Time taken for score calculation over 500 iterations: 0.4897 seconds
+Time taken for LMI score (AEMINE) calculation: 19.1958 seconds
+LMI score (AEMINE) for rho = 0.4054: 0.1876
+Running experiment with rho = 0.4269
+Time taken for score calculation over 500 iterations: 0.5188 seconds
+Time taken for LMI score (AEMINE) calculation: 19.0883 seconds
+LMI score (AEMINE) for rho = 0.4269: 0.3224
+Running experiment with rho = 0.4439
+Time taken for score calculation over 500 iterations: 0.5528 seconds
+Time taken for LMI score (AEMINE) calculation: 13.3654 seconds
+LMI score (AEMINE) for rho = 0.4439: 0.3643
+Running experiment with rho = 0.4604
+Time taken for score calculation over 500 iterations: 0.5264 seconds
+Time taken for LMI score (AEMINE) calculation: 15.9500 seconds
+LMI score (AEMINE) for rho = 0.4604: 0.3315
+Running experiment with rho = 0.4734
+Time taken for score calculation over 500 iterations: 0.5040 seconds
+Time taken for LMI score (AEMINE) calculation: 15.0236 seconds
+LMI score (AEMINE) for rho = 0.4734: 0.4545
+Running experiment with rho = 0.4841
+Time taken for score calculation over 500 iterations: 0.5485 seconds
+Time taken for LMI score (AEMINE) calculation: 18.5330 seconds
+LMI score (AEMINE) for rho = 0.4841: 0.6697
+Running experiment with rho = 0.4963
+Time taken for score calculation over 500 iterations: 0.5827 seconds
+Time taken for LMI score (AEMINE) calculation: 16.5198 seconds
+LMI score (AEMINE) for rho = 0.4963: 0.7138
+Running experiment with rho = 0.5
+Time taken for score calculation over 500 iterations: 0.4720 seconds
+Time taken for LMI score (AEMINE) calculation: 14.0407 seconds
+LMI score (AEMINE) for rho = 0.5: 0.6706
+Spearman's Rho of LMI scores (AEMINE) for repetition 10/10: 0.9758
+
+Final Results:
+Average Spearman's Rho of LMI scores (AEMINE) over 10 repetitions: 0.9527 (var = 0.0010)
+Average scores and variances for each rho:
+  rho = 0.3418: avg_lmi_aemine = 0.0332, var_lmi_aemine = 0.0029
+  rho = 0.3785: avg_lmi_aemine = 0.1244, var_lmi_aemine = 0.0064
+  rho = 0.4054: avg_lmi_aemine = 0.1918, var_lmi_aemine = 0.0043
+  rho = 0.4269: avg_lmi_aemine = 0.2553, var_lmi_aemine = 0.0057
+  rho = 0.4439: avg_lmi_aemine = 0.3537, var_lmi_aemine = 0.0037
+  rho = 0.4604: avg_lmi_aemine = 0.4708, var_lmi_aemine = 0.0066
+  rho = 0.4734: avg_lmi_aemine = 0.5130, var_lmi_aemine = 0.0074
+  rho = 0.4841: avg_lmi_aemine = 0.5538, var_lmi_aemine = 0.0066
+  rho = 0.4963: avg_lmi_aemine = 0.6622, var_lmi_aemine = 0.0053
+  rho = 0.5: avg_lmi_aemine = 0.7380, var_lmi_aemine = 0.0054

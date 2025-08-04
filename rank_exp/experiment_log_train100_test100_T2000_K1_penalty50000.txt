@@ -1,0 +1,6 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 2000 iterations: 2.0164 seconds
+Time taken for LMI score (AEMINE) calculation: 50.9646 seconds
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418

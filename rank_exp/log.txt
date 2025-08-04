@@ -1,0 +1,39 @@
+Using device: cuda
+Files already downloaded and verified
+Running experiment repetition 1/1
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3388
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3386
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3410
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3617
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3470
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3489
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3426
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3381
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3353
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3416
+Kendall's Tau for repetition 1/1: 0.1111
+
+
+Final Results:
+Average Kendall's Tau over 1 repetitions: 0.1111
+Average InfoNCE MI estimates for each rho:
+  rho = 0.2621: -4.3388
+  rho = 0.275: -4.3386
+  rho = 0.2894: -4.3410
+  rho = 0.3062: -4.3617
+  rho = 0.3271: -4.3470
+  rho = 0.3552: -4.3489
+  rho = 0.395: -4.3426
+  rho = 0.4514: -4.3381
+  rho = 0.4877: -4.3353
+  rho = 0.5: -4.3416

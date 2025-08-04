@@ -1,0 +1,46 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Time taken for score calculation over 10 iterations: 1.1050 seconds
+Average score for rho = 0.3418: 31.4098 (var = 1.9966)
+Running experiment with rho = 0.3785
+Time taken for score calculation over 10 iterations: 0.8950 seconds
+Average score for rho = 0.3785: 31.8021 (var = 1.8172)
+Running experiment with rho = 0.4054
+Time taken for score calculation over 10 iterations: 0.8032 seconds
+Average score for rho = 0.4054: 30.5546 (var = 3.7462)
+Running experiment with rho = 0.4269
+Time taken for score calculation over 10 iterations: 0.9055 seconds
+Average score for rho = 0.4269: 31.5659 (var = 1.7990)
+Running experiment with rho = 0.4439
+Time taken for score calculation over 10 iterations: 1.0972 seconds
+Average score for rho = 0.4439: 31.5304 (var = 3.1364)
+Running experiment with rho = 0.4604
+Time taken for score calculation over 10 iterations: 1.0966 seconds
+Average score for rho = 0.4604: 30.8035 (var = 1.4320)
+Running experiment with rho = 0.4734
+Time taken for score calculation over 10 iterations: 0.8067 seconds
+Average score for rho = 0.4734: 30.5404 (var = 3.7913)
+Running experiment with rho = 0.4841
+Time taken for score calculation over 10 iterations: 0.8997 seconds
+Average score for rho = 0.4841: 31.3779 (var = 1.7153)
+Running experiment with rho = 0.4963
+Time taken for score calculation over 10 iterations: 0.8921 seconds
+Average score for rho = 0.4963: 31.7932 (var = 2.5969)
+Running experiment with rho = 0.5
+Time taken for score calculation over 10 iterations: 0.8117 seconds
+Average score for rho = 0.5: 30.9492 (var = 3.3784)
+Spearman's Rho of average scores for repetition 1/1: -0.2121
+
+Final Results:
+Average Spearman's Rho of average scores over 1 repetitions: -0.2121 (var = 0.0000)
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 31.4098, var = 0.0000
+  rho = 0.3785: avg = 31.8021, var = 0.0000
+  rho = 0.4054: avg = 30.5546, var = 0.0000
+  rho = 0.4269: avg = 31.5659, var = 0.0000
+  rho = 0.4439: avg = 31.5304, var = 0.0000
+  rho = 0.4604: avg = 30.8035, var = 0.0000
+  rho = 0.4734: avg = 30.5404, var = 0.0000
+  rho = 0.4841: avg = 31.3779, var = 0.0000
+  rho = 0.4963: avg = 31.7932, var = 0.0000
+  rho = 0.5: avg = 30.9492, var = 0.0000

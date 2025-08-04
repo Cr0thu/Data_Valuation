@@ -1,0 +1,36 @@
+Running experiment repetition 1/1
+Running experiment with rho = 0.3418
+Average score for rho = 0.3418: 72.0596
+Running experiment with rho = 0.3785
+Average score for rho = 0.3785: 72.2219
+Running experiment with rho = 0.4054
+Average score for rho = 0.4054: 72.2422
+Running experiment with rho = 0.4269
+Average score for rho = 0.4269: 72.0973
+Running experiment with rho = 0.4439
+Average score for rho = 0.4439: 72.1026
+Running experiment with rho = 0.4604
+Average score for rho = 0.4604: 72.2716
+Running experiment with rho = 0.4734
+Average score for rho = 0.4734: 72.2205
+Running experiment with rho = 0.4841
+Average score for rho = 0.4841: 72.3445
+Running experiment with rho = 0.4963
+Average score for rho = 0.4963: 72.3544
+Running experiment with rho = 0.5
+Average score for rho = 0.5: 72.2449
+Kendall's Tau for repetition 1/1: 0.5556
+
+Final Results:
+Average Kendall's Tau over 1 repetitions: 0.5556
+Average scores and variances for each rho:
+  rho = 0.3418: avg = 72.0596, var = 0.0000
+  rho = 0.3785: avg = 72.2219, var = 0.0000
+  rho = 0.4054: avg = 72.2422, var = 0.0000
+  rho = 0.4269: avg = 72.0973, var = 0.0000
+  rho = 0.4439: avg = 72.1026, var = 0.0000
+  rho = 0.4604: avg = 72.2716, var = 0.0000
+  rho = 0.4734: avg = 72.2205, var = 0.0000
+  rho = 0.4841: avg = 72.3445, var = 0.0000
+  rho = 0.4963: avg = 72.3544, var = 0.0000
+  rho = 0.5: avg = 72.2449, var = 0.0000

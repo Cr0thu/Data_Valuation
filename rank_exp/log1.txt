@@ -1,0 +1,476 @@
+Using device: cuda
+Files already downloaded and verified
+Running experiment repetition 1/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3557
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3460
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3451
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3464
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3364
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3392
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3657
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3243
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3406
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3520
+Kendall's Tau for repetition 1/20: 0.1556
+
+Running experiment repetition 2/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3467
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3529
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3296
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3443
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3366
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3409
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3249
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3442
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3415
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3297
+Kendall's Tau for repetition 2/20: 0.3333
+
+Running experiment repetition 3/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3466
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3393
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3384
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3431
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3458
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3664
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3357
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3330
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3505
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3551
+Kendall's Tau for repetition 3/20: -0.1111
+
+Running experiment repetition 4/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3508
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3484
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3425
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3389
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3246
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3532
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3515
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3477
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3493
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3570
+Kendall's Tau for repetition 4/20: -0.2000
+
+Running experiment repetition 5/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3440
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3582
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3499
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3530
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3309
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3542
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3580
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3406
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3543
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3410
+Kendall's Tau for repetition 5/20: 0.0222
+
+Running experiment repetition 6/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3561
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3477
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3385
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3400
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3403
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3458
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3501
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3508
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3489
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3300
+Kendall's Tau for repetition 6/20: 0.0222
+
+Running experiment repetition 7/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3349
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3435
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3416
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3514
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3254
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3475
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3494
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3500
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3362
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3419
+Kendall's Tau for repetition 7/20: -0.1556
+
+Running experiment repetition 8/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3541
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3594
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3460
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3497
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3431
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3426
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3419
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3173
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3400
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3436
+Kendall's Tau for repetition 8/20: 0.6444
+
+Running experiment repetition 9/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3514
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3303
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3413
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3540
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3418
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3435
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3436
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3496
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3505
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3428
+Kendall's Tau for repetition 9/20: -0.2000
+
+Running experiment repetition 10/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3388
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3414
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3525
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3400
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3352
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3403
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3258
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3625
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3473
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3329
+Kendall's Tau for repetition 10/20: 0.0667
+
+Running experiment repetition 11/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3471
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3209
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3469
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3368
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3428
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3325
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3573
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3384
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3486
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3483
+Kendall's Tau for repetition 11/20: -0.2444
+
+Running experiment repetition 12/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3496
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3575
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3375
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3285
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3413
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3412
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3593
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3480
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3477
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3488
+Kendall's Tau for repetition 12/20: -0.1111
+
+Running experiment repetition 13/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3353
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3653
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3351
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3259
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3534
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3394
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3446
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3454
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3384
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3479
+Kendall's Tau for repetition 13/20: -0.1556
+
+Running experiment repetition 14/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3468
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3347
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3483
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3605
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3571
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3543
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3260
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3428
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3496
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3254
+Kendall's Tau for repetition 14/20: 0.2000
+
+Running experiment repetition 15/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3575
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3505
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3530
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3529
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3238
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3417
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3546
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3375
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3384
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3405
+Kendall's Tau for repetition 15/20: 0.3778
+
+Running experiment repetition 16/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3327
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3639
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3146
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3567
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3686
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3364
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3253
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3428
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3336
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3449
+Kendall's Tau for repetition 16/20: -0.0222
+
+Running experiment repetition 17/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3251
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3313
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3602
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3398
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3356
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3454
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3412
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3204
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3506
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3589
+Kendall's Tau for repetition 17/20: -0.3333
+
+Running experiment repetition 18/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3411
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3320
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3357
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3446
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3409
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3460
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3354
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3402
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3444
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3315
+Kendall's Tau for repetition 18/20: 0.0667
+
+Running experiment repetition 19/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3618
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3336
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3374
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3279
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3514
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3515
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3426
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3528
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3592
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3529
+Kendall's Tau for repetition 19/20: -0.3778
+
+Running experiment repetition 20/20
+  rho = 0.2621
+    Average InfoNCE MI estimate for rho = 0.2621: -4.3476
+  rho = 0.275
+    Average InfoNCE MI estimate for rho = 0.275: -4.3405
+  rho = 0.2894
+    Average InfoNCE MI estimate for rho = 0.2894: -4.3535
+  rho = 0.3062
+    Average InfoNCE MI estimate for rho = 0.3062: -4.3491
+  rho = 0.3271
+    Average InfoNCE MI estimate for rho = 0.3271: -4.3584
+  rho = 0.3552
+    Average InfoNCE MI estimate for rho = 0.3552: -4.3265
+  rho = 0.395
+    Average InfoNCE MI estimate for rho = 0.395: -4.3315
+  rho = 0.4514
+    Average InfoNCE MI estimate for rho = 0.4514: -4.3437
+  rho = 0.4877
+    Average InfoNCE MI estimate for rho = 0.4877: -4.3232
+  rho = 0.5
+    Average InfoNCE MI estimate for rho = 0.5: -4.3635
+Kendall's Tau for repetition 20/20: 0.0667
+
+
+Final Results:
+Average Kendall's Tau over 20 repetitions: 0.0022
+Average InfoNCE MI estimates for each rho:
+  rho = 0.2621: -4.3462
+  rho = 0.275: -4.3449
+  rho = 0.2894: -4.3424
+  rho = 0.3062: -4.3442
+  rho = 0.3271: -4.3417
+  rho = 0.3552: -4.3444
+  rho = 0.395: -4.3432
+  rho = 0.4514: -4.3416
+  rho = 0.4877: -4.3446
+  rho = 0.5: -4.3444
