@@ -1,6 +1,10 @@
 # Ignore all txt files
 *.txt
 
+# Ignore log directories and files
+experiment_logs/
+*.log
+
 # Common Python files to ignore
 __pycache__/
 *.py[cod]
