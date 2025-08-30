@@ -141,6 +141,10 @@ declare -a PIDS=()
 declare -a RUN_IDS=()
 declare -a GPU_IDS=()
 
+# File to record successful process IDs
+SUCCESS_LOG_FILE="successful_processes_$(date +%Y%m%d_%H%M%S).txt"
+echo "# Successful process IDs for experiment started at $(date)" > "$SUCCESS_LOG_FILE"
+
 # Function to run a single instance with retry mechanism
 run_instance() {
     local GPU_ID=$1
@@ -170,6 +174,8 @@ run_instance() {
             # Check if process is still running
             if kill -0 $pid 2>/dev/null; then
                 echo "Run $RUN_ID started successfully on GPU $GPU_ID"
+                # Record successful process
+                echo "RUN_ID: $RUN_ID, GPU_ID: $GPU_ID, PID: $pid" >> "$SUCCESS_LOG_FILE"
                 return 0
             else
                 echo "Run $RUN_ID failed to start on GPU $GPU_ID"
@@ -217,52 +223,29 @@ monitor_processes() {
 # Check system resources before starting
 check_resources
 
-# Make sure no previous Python processes are running
-echo "Cleaning up any existing Python processes..."
-pkill -9 python 2>/dev/null || true
-sleep 3
+
 
 echo "Starting all runs with improved resource management..."
 
-# Start processes in batches to avoid resource contention
-# Batch 1: GPU 0 and GPU 1 (runs 1-10)
-echo "Starting batch 1 (GPU 0 and 1)..."
-for GPU_ID in 0 1; do
-    for i in {1..5}; do
-        RUN_ID=$((GPU_ID * 5 + i))
+# Start all 12 processes in parallel
+echo "Starting all 12 processes in parallel..."
+for GPU_ID in 0 1 2 3; do
+    for i in {1..3}; do
+        RUN_ID=$((GPU_ID * 3 + i))
         run_instance $GPU_ID $RUN_ID
         sleep 2  # Small delay between process starts
     done
 done
 
-# Wait a bit for first batch to stabilize
-echo "Waiting for first batch to stabilize..."
-sleep 10
-
-# Check if first batch is running properly
-if ! monitor_processes; then
-    echo "Some processes in first batch failed, but continuing..."
-fi
-
-# Batch 2: GPU 2 and GPU 3 (runs 11-20)
-echo "Starting batch 2 (GPU 2 and 3)..."
-for GPU_ID in 2 3; do
-    for i in {1..5}; do
-        RUN_ID=$((GPU_ID * 5 + i))
-        run_instance $GPU_ID $RUN_ID
-        sleep 2  # Small delay between process starts
-    done
-done
-
-# Final wait for second batch to stabilize
-echo "Waiting for second batch to stabilize..."
+# Wait for all processes to stabilize
+echo "Waiting for all processes to stabilize..."
 sleep 10
 
 # Final status check
 echo "Final status check..."
 monitor_processes
 
-echo "All processes launched. Total running: ${#PIDS[@]} out of 20"
+echo "All processes launched. Total running: ${#PIDS[@]} out of 12"
 echo "Running PIDs: ${PIDS[*]}"
 echo "Running RUN_IDs: ${RUN_IDS[*]}"
 
@@ -270,6 +253,23 @@ echo "Running RUN_IDs: ${RUN_IDS[*]}"
 echo "Waiting for all processes to complete..."
 wait
 
+echo "All runs completed. Recording final successful processes..."
+
+# Record final successful processes that completed
+for i in "${!PIDS[@]}"; do
+    local pid=${PIDS[$i]}
+    local run_id=${RUN_IDS[$i]}
+    local gpu_id=${GPU_IDS[$i]}
+    
+    # Check if process completed successfully (exit code 0)
+    if wait $pid 2>/dev/null; then
+        echo "RUN_ID: $run_id, GPU_ID: $gpu_id, PID: $pid - COMPLETED_SUCCESSFULLY" >> "$SUCCESS_LOG_FILE"
+    else
+        echo "RUN_ID: $run_id, GPU_ID: $gpu_id, PID: $pid - FAILED_OR_CRASHED" >> "$SUCCESS_LOG_FILE"
+    fi
+done
+
+echo "Process completion status recorded in: $SUCCESS_LOG_FILE"
 echo "All runs completed. Combining results..."
 
 # Combine results from all runs

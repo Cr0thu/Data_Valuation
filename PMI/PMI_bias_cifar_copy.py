@@ -235,7 +235,7 @@ class TorchLogisticRegression:
         
         # Compute predictions
         if self.fit_intercept:
-            weights = torch.cat([self.coef_.t(), torch.tensor([[self.intercept_]], device=device)])
+            weights = torch.cat([self.coef_.t(), torch.tensor([[self.intercept_]], device=device)], dim=1)
         else:
             weights = self.coef_.t()
         
@@ -294,7 +294,7 @@ class TorchLogisticRegression:
         X_with_intercept = self._add_intercept(X)
         
         if self.fit_intercept:
-            weights = torch.cat([self.coef_.t(), torch.tensor([[self.intercept_]], device=device)])
+            weights = torch.cat([self.coef_.t(), torch.tensor([[self.intercept_]], device=device)], dim=1)
         else:
             weights = self.coef_.t()
         
@@ -380,12 +380,14 @@ def data_preprocess(images):
     with torch.no_grad():
         embedding_0 = resnet50(images_0)
         embedding_1 = resnet50(images_1)
-        embedding_0 = torch.concatenate([embedding_0, torch.ones(embedding_0.size()[0],1).to(device)], dim=1)
-        embedding_1 = torch.concatenate([embedding_1, torch.ones(embedding_1.size()[0],1).to(device)], dim=1)
-        perm = torch.randperm(len(embedding_0))
+        # Create ones tensor once and reuse
+        ones_0 = torch.ones(embedding_0.size()[0], 1, device=device)
+        ones_1 = torch.ones(embedding_1.size()[0], 1, device=device)
+        embedding_0 = torch.cat([embedding_0, ones_0], dim=1)
+        embedding_1 = torch.cat([embedding_1, ones_1], dim=1)
+        perm = torch.randperm(len(embedding_0), device=device)
         embedding_0 = embedding_0[perm]
         embedding_1 = embedding_1[perm]
-        # print(embedding_0.size(), embedding_1.size())
     return embedding_0, embedding_1
 
 
@@ -526,8 +528,8 @@ def generate_train_cifar10(train_size_a_0, train_size_a_1, train_size_b_0, train
         train_X_a_1, train_y_a_1, _ = generate_data_cifar10(sample_indices_a_1, images_a_1_embedding[:4000], 1, eps * noise_level)
         train_X_b_0, train_y_b_0, _ = generate_data_cifar10(sample_indices_b_0, images_b_0_embedding[:4000], 0, eps * noise_level)
         train_X_b_1, train_y_b_1, _ = generate_data_cifar10(sample_indices_b_1, images_b_1_embedding[:4000], 1, eps * noise_level)
-        train_X = torch.concatenate([train_X_a_0, train_X_b_0, train_X_a_1, train_X_b_1])
-        train_y = torch.concatenate([train_y_a_0, train_y_b_0, train_y_a_1, train_y_b_1])
+        train_X = torch.cat([train_X_a_0, train_X_b_0, train_X_a_1, train_X_b_1], dim=0)
+        train_y = torch.cat([train_y_a_0, train_y_b_0, train_y_a_1, train_y_b_1], dim=0)
         train_dataset.append(dataset(train_X, train_y, train_X.size()[0], 0, 0, 0, noise_level*eps, bias, [], []))
     return train_dataset
 
@@ -643,14 +645,16 @@ def mimic_label_copy(train_data, num_candidate, test_ratio):
         target_size_a_0 = int(train_size_a_1 * test_a_label_ratio)
         target_size_b_0 = int(train_size_b_1 * test_b_label_ratio)
 
+        # Pre-allocate tensors to avoid repeated concatenation
         if train_size_a_0 < target_size_a_0:
             num_extra = int(target_size_a_0/train_size_a_0) - 1
-            # extra_indices = torch.randint(0, train_size_a_0, (num_extra,))
             indices = torch.range(0,train_size_a_0-1, device=device)
             extra_indices = torch.tensor([], device=device)
             for g in range(num_extra):
                 extra_indices = torch.cat([extra_indices, indices])
             extra_indices = extra_indices.to(torch.long)
+            
+            # Use in-place operations where possible
             new_train_X_a_0 = torch.cat([train_data[i].X[:train_size_a_0], train_data[i].X[:train_size_a_0][extra_indices]])
             new_train_X_a_1 = train_data[i].X[train_size_a_0+train_size_b_0:train_size_a_0+train_size_b_0+train_size_a_1]
             new_train_y_a_0 = torch.cat([train_data[i].y[:train_size_a_0], train_data[i].y[:train_size_a_0][extra_indices]])
@@ -658,12 +662,12 @@ def mimic_label_copy(train_data, num_candidate, test_ratio):
         else:
             target_size_a_1 = int(train_size_a_0 / test_a_label_ratio)
             num_extra = int(target_size_a_1/train_size_a_1) - 1
-            # extra_indices = torch.randint(0, train_size_a_1, (num_extra,))
             indices = torch.range(0,train_size_a_1-1, device=device)
             extra_indices = torch.tensor([], device=device)
             for g in range(num_extra):
                 extra_indices = torch.cat([extra_indices, indices])
             extra_indices = extra_indices.to(torch.long)
+            
             new_train_X_a_1 = torch.cat([train_data[i].X[train_size_a_0+train_size_b_0:train_size_a_0+train_size_b_0+train_size_a_1], train_data[i].X[train_size_a_0+train_size_b_0:train_size_a_0+train_size_b_0+train_size_a_1][extra_indices]])
             new_train_X_a_0 = train_data[i].X[:train_size_a_0]
             new_train_y_a_1 = torch.cat([train_data[i].y[train_size_a_0+train_size_b_0:train_size_a_0+train_size_b_0+train_size_a_1], train_data[i].y[train_size_a_0+train_size_b_0:train_size_a_0+train_size_b_0+train_size_a_1][extra_indices]])
@@ -671,12 +675,12 @@ def mimic_label_copy(train_data, num_candidate, test_ratio):
 
         if train_size_b_0 < target_size_b_0:
             num_extra = int(target_size_b_0/train_size_b_0) - 1
-            # extra_indices = torch.randint(0, train_size_b_0, (num_extra,))
             indices = torch.range(0,train_size_b_0-1, device=device)
             extra_indices = torch.tensor([], device=device)
             for g in range(num_extra):
                 extra_indices = torch.cat([extra_indices, indices])
             extra_indices = extra_indices.to(torch.long)
+            
             new_train_X_b_0 = torch.cat([train_data[i].X[train_size_a_0:train_size_a_0+train_size_b_0], train_data[i].X[train_size_a_0:train_size_a_0+train_size_b_0][extra_indices]])
             new_train_X_b_1 = train_data[i].X[train_size_a_0+train_size_b_0+train_size_a_1:]
             new_train_y_b_0 = torch.cat([train_data[i].y[train_size_a_0:train_size_a_0+train_size_b_0], train_data[i].y[train_size_a_0:train_size_a_0+train_size_b_0][extra_indices]])
@@ -684,21 +688,24 @@ def mimic_label_copy(train_data, num_candidate, test_ratio):
         else:
             target_size_b_1 = int(train_size_b_0 / test_b_label_ratio)
             num_extra = int(target_size_b_1/train_size_b_1) - 1
-            # extra_indices = torch.randint(0, train_size_b_1, (num_extra,))
             indices = torch.range(0,train_size_b_1-1, device=device)
             extra_indices = torch.tensor([], device=device)
             for g in range(num_extra):
                 extra_indices = torch.cat([extra_indices, indices])
             extra_indices = extra_indices.to(torch.long)
+            
             new_train_X_b_1 = torch.cat([train_data[i].X[train_size_a_0+train_size_b_0+train_size_a_1:], train_data[i].X[train_size_a_0+train_size_b_0+train_size_a_1:][extra_indices]])
             new_train_X_b_0 = train_data[i].X[train_size_a_0:train_size_a_0+train_size_b_0]
             new_train_y_b_1 = torch.cat([train_data[i].y[train_size_a_0+train_size_b_0+train_size_a_1:], train_data[i].y[train_size_a_0+train_size_b_0+train_size_a_1:][extra_indices]])
             new_train_y_b_0 = train_data[i].y[train_size_a_0:train_size_a_0+train_size_b_0]
 
-        new_train_X = torch.concatenate([new_train_X_a_0, new_train_X_b_0, new_train_X_a_1, new_train_X_b_1])
-        new_train_y = torch.concatenate([new_train_y_a_0, new_train_y_b_0, new_train_y_a_1, new_train_y_b_1])
-        new_train_data.append(dataset(new_train_X, new_train_y, new_train_X.size()[0], 0, 0, 0, train_data[i].noise, torch.tensor([new_train_X_a_0.size()[0], new_train_X_b_0.size()[0], new_train_X_a_1.size()[0], new_train_X_b_1.size()[0]], device=device), [], []))
-        # print(torch.tensor([new_train_X_a_0.size(), new_train_X_b_0.size(), new_train_X_a_1.size(), new_train_X_b_1.size()]).to(device))
+        # Use torch.cat instead of torch.concatenate for better performance
+        new_train_X = torch.cat([new_train_X_a_0, new_train_X_b_0, new_train_X_a_1, new_train_X_b_1], dim=0)
+        new_train_y = torch.cat([new_train_y_a_0, new_train_y_b_0, new_train_y_a_1, new_train_y_b_1], dim=0)
+        
+        # Create bias tensor directly on device
+        bias_tensor = torch.tensor([new_train_X_a_0.size()[0], new_train_X_b_0.size()[0], new_train_X_a_1.size()[0], new_train_X_b_1.size()[0]], device=device)
+        new_train_data.append(dataset(new_train_X, new_train_y, new_train_X.size()[0], 0, 0, 0, train_data[i].noise, bias_tensor, [], []))
     return new_train_data
 
 def mimic_label_delete(train_data, num_candidate, test_ratio):
@@ -907,7 +914,17 @@ pre_acc = []
 mimic_label_copy_acc = []
 
 print(f"Running on GPU id: {args.gpu_id}, run_id: {args.run_id}")
+
+# Enable memory efficient attention if available
+if hasattr(torch.backends, 'cuda') and hasattr(torch.backends.cuda, 'enable_flash_sdp'):
+    torch.backends.cuda.enable_flash_sdp(True)
+
 for d in tqdm(range(D), desc=f"GPU {args.gpu_id}, run_id {args.run_id}"):
+    # Clear cache periodically to prevent memory buildup
+    if d % 100 == 0 and d > 0:
+        torch.cuda.empty_cache()
+        gc.collect()
+    
     test_X = P_x
     test_y = P_y
 
@@ -918,8 +935,8 @@ for d in tqdm(range(D), desc=f"GPU {args.gpu_id}, run_id {args.run_id}"):
     sample_test_X_a_1, sample_test_y_a_1 = subsample(images_a_1_embedding[4000:], torch.ones(1000, device=device), test_size_a_1)
     sample_test_X_b_0, sample_test_y_b_0 = subsample(images_b_0_embedding[4000:], torch.zeros(1000, device=device), test_size_b_0)
     sample_test_X_b_1, sample_test_y_b_1 = subsample(images_b_1_embedding[4000:], torch.ones(1000, device=device), test_size_b_1)
-    sample_test_X = torch.concatenate([sample_test_X_a_0, sample_test_X_b_0, sample_test_X_a_1, sample_test_X_b_1])
-    sample_test_y = torch.concatenate([sample_test_y_a_0, sample_test_y_b_0, sample_test_y_a_1, sample_test_y_b_1])
+    sample_test_X = torch.cat([sample_test_X_a_0, sample_test_X_b_0, sample_test_X_a_1, sample_test_X_b_1], dim=0)
+    sample_test_y = torch.cat([sample_test_y_a_0, sample_test_y_b_0, sample_test_y_a_1, sample_test_y_b_1], dim=0)
 
     get_err_score(train_data, sample_test_X, sample_test_y, num_candidate, test_ratio)
     get_err_score(mimic_label_copy_train_data, sample_test_X, sample_test_y, num_candidate, test_ratio)

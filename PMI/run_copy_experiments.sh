@@ -14,32 +14,18 @@ echo "Starting experiment with ID: $EXP_ID"
 # 定义参数范围（使用循环）
 # 训练集大小配置
 TRAIN_CONFIGS=(
-    # 小数据集
-    "20 20 20 20"
-    # 中等数据集
     "30 30 30 30"
-    # 大数据集
-    "50 50 50 50"
-    # 不平衡数据集1
-    "20 40 40 20"
-    # 不平衡数据集2
-    "40 20 20 40"
+    "300 300 300 300"
 )
 
 # 测试集大小配置
 TEST_CONFIGS=(
-    # 标准配置
     "20 40 40 20"
-    # 小测试集
-    "15 30 30 15"
-    # 大测试集
-    "30 60 60 30"
-    # 不平衡测试集
-    "15 45 45 15"
+    "200 400 400 200"
 )
 
 # 惩罚参数
-PENALTIES=(10 50 100 200 500)
+PENALTIES=(10 100 1000)
 
 # 噪声水平
 NOISE_LEVELS=(0 10)
@@ -56,6 +42,8 @@ echo "" >> "$RESULTS_DIR/experiment_info.txt"
 # 运行计数器
 SUCCESS_COUNT=0
 FAILED_COUNT=0
+TOTAL_PROCESSES_STARTED=0
+TOTAL_PROCESSES_COMPLETED=0
 
 # 实验配置函数
 run_single_experiment() {
@@ -97,6 +85,22 @@ run_single_experiment() {
         if [ -f "output_copy_final.txt" ]; then
             cp "output_copy_final.txt" "$RESULTS_DIR/result_${exp_num}.txt"
             echo "Results saved to: $RESULTS_DIR/result_${exp_num}.txt"
+        fi
+        
+        # 记录成功运行的进程信息
+        local success_log_file=$(ls -t successful_processes_*.txt 2>/dev/null | head -1)
+        if [ -n "$success_log_file" ]; then
+            cp "$success_log_file" "$RESULTS_DIR/process_log_${exp_num}.txt"
+            echo "Process log saved to: $RESULTS_DIR/process_log_${exp_num}.txt"
+            
+            # 统计成功完成的进程数量
+            local completed_count=$(grep -c "COMPLETED_SUCCESSFULLY" "$success_log_file" 2>/dev/null || echo "0")
+            local total_started=$(grep -c "RUN_ID:" "$success_log_file" 2>/dev/null || echo "0")
+            echo "Process completion summary: $completed_count/$total_started processes completed successfully" | tee -a "$log_file"
+            
+            # 更新全局统计
+            TOTAL_PROCESSES_STARTED=$((TOTAL_PROCESSES_STARTED + total_started))
+            TOTAL_PROCESSES_COMPLETED=$((TOTAL_PROCESSES_COMPLETED + completed_count))
         fi
     else
         echo "Experiment $exp_num failed" | tee -a "$log_file"
@@ -155,6 +159,9 @@ echo "Total experiments: $((exp_counter - 1))"
 echo "Successful: $SUCCESS_COUNT"
 echo "Failed: $FAILED_COUNT"
 echo "Success rate: $(echo "scale=2; $SUCCESS_COUNT * 100 / $((exp_counter - 1))" | bc)%"
+echo "Total processes started: $TOTAL_PROCESSES_STARTED"
+echo "Total processes completed: $TOTAL_PROCESSES_COMPLETED"
+echo "Process completion rate: $(echo "scale=2; $TOTAL_PROCESSES_COMPLETED * 100 / $TOTAL_PROCESSES_STARTED" | bc)%"
 echo "End time: $(date)"
 
 # 保存实验总结
@@ -167,6 +174,9 @@ echo "End time: $(date)"
     echo "Successful: $SUCCESS_COUNT"
     echo "Failed: $FAILED_COUNT"
     echo "Success rate: $(echo "scale=2; $SUCCESS_COUNT * 100 / $((exp_counter - 1))" | bc)%"
+    echo "Total processes started: $TOTAL_PROCESSES_STARTED"
+    echo "Total processes completed: $TOTAL_PROCESSES_COMPLETED"
+    echo "Process completion rate: $(echo "scale=2; $TOTAL_PROCESSES_COMPLETED * 100 / $TOTAL_PROCESSES_STARTED" | bc)%"
     echo "End time: $(date)"
     echo ""
     echo "Parameter ranges used:"
