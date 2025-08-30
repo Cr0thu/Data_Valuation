@@ -1,0 +1,4 @@
+train size: 30, 30, 30, 30; test size: 20, 40, 40, 20 
+train size: 20, 20, 20, 20; test size: 10, 20, 20, 10 
+train size: 20, 20, 20, 20; test size: 10, 20, 20, 10 
+train size: 20, 20, 20, 20; test size: 10, 20, 20, 10 

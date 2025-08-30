@@ -13,7 +13,7 @@ train_sizes=("30,30,30,30"
             # "40,20,20,40"
             )
 
-penalties=(10000 20000 30000 50000 100000)
+penalties=(0.01)
 
 for train_size in "${train_sizes[@]}"; do
     IFS=',' read -r train_size_a_0 train_size_a_1 train_size_b_0 train_size_b_1 <<< "$train_size"
