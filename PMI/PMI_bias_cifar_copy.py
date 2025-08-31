@@ -345,7 +345,7 @@ device = torch.device(f"cuda:{args.gpu_id}" if torch.cuda.is_available() else "c
 print(f"Using device: {device}")
 
 # Create output file specific to this run
-output_file = f"output_copy_{args.run_id}_train_{args.train_size_a_0}_{args.train_size_a_1}_{args.train_size_b_0}_{args.train_size_b_1}_test_{args.test_size_a_0}_{args.test_size_a_1}_{args.test_size_b_0}_{args.test_size_b_1}.txt"
+output_file = f"output_copy_{args.run_id}_train_{args.train_size_a_0}_{args.train_size_a_1}_{args.train_size_b_0}_{args.train_size_b_1}_test_{args.test_size_a_0}_{args.test_size_a_1}_{args.test_size_b_0}_{args.test_size_b_1}_penalty_{args.penalty}_noise_{args.noise_level}.txt"
 
 resnet50 = models.resnet50(pretrained=True)
 resnet50.fc = torch.nn.Identity()

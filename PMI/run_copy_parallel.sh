@@ -257,9 +257,9 @@ echo "All runs completed. Recording final successful processes..."
 
 # Record final successful processes that completed
 for i in "${!PIDS[@]}"; do
-    local pid=${PIDS[$i]}
-    local run_id=${RUN_IDS[$i]}
-    local gpu_id=${GPU_IDS[$i]}
+    pid=${PIDS[$i]}
+    run_id=${RUN_IDS[$i]}
+    gpu_id=${GPU_IDS[$i]}
     
     # Check if process completed successfully (exit code 0)
     if wait $pid 2>/dev/null; then
@@ -297,7 +297,7 @@ all_losses = []
 all_accs = []
 
 # Get all output files matching the pattern
-output_files = glob.glob(f"output_copy_*_train_{train_size_a_0}_{train_size_a_1}_{train_size_b_0}_{train_size_b_1}_test_{test_size_a_0}_{test_size_a_1}_{test_size_b_0}_{test_size_b_1}.txt")
+output_files = glob.glob(f"output_copy_*_train_{train_size_a_0}_{train_size_a_1}_{train_size_b_0}_{train_size_b_1}_test_{test_size_a_0}_{test_size_a_1}_{test_size_b_0}_{test_size_b_1}_penalty_{penalty}_noise_{noise}.txt")
 
 print(f"Found {len(output_files)} output files to process")
 
@@ -336,12 +336,12 @@ if all_scores:
     acc_std = np.std(all_accs)
 
     # Write final results with file lock
-    with open('output_copy_final.txt', 'w') as f:
+    with open('output_copy_final.txt', 'a') as f:
         # 获取独占锁用于写入
         fcntl.flock(f.fileno(), fcntl.LOCK_EX)
         try:
-            f.write(f"train size: {train_size_a_0}, {train_size_a_1}, {train_size_b_0}, {train_size_b_1}; test size: {test_size_a_0}, {test_size_a_1}, {test_size_b_0}, {test_size_b_1}\\n")
-            f.write(f"{penalty} & {noise} & Copy & {score_mean:.4f}\\\\pm{score_std:.4f} & {loss_mean:.4f}\\\\pm{loss_std:.4f} & {acc_mean:.4f}\\\\pm{acc_std:.4f} \\\\\\\\n")
+            f.write(f"train size: {train_size_a_0}, {train_size_a_1}, {train_size_b_0}, {train_size_b_1}; test size: {test_size_a_0}, {test_size_a_1}, {test_size_b_0}, {test_size_b_1}\n")
+            f.write(f"{penalty} & {noise} & Copy & {score_mean:.4f}\\\\pm{score_std:.4f} & {loss_mean:.4f}\\\\pm{loss_std:.4f} & {acc_mean:.4f}\\\\pm{acc_std:.4f}\n")
             f.flush()  # 确保数据立即写入
         finally:
             fcntl.flock(f.fileno(), fcntl.LOCK_UN)
