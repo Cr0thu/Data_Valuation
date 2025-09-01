@@ -10,7 +10,8 @@ TEST_SIZE_A_1=40
 TEST_SIZE_B_0=40
 TEST_SIZE_B_1=20
 PENALTY=100
-NOISE_LEVEL=0.0
+NOISE_LEVEL=0
+D=3000
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
@@ -55,9 +56,13 @@ while [[ $# -gt 0 ]]; do
             NOISE_LEVEL="$2"
             shift 2
             ;;
+        --D)
+            D="$2"
+            shift 2
+            ;;
         *)
             echo "Unknown option: $1"
-            echo "Usage: $0 [--train_size_a_0 VALUE] [--train_size_a_1 VALUE] [--train_size_b_0 VALUE] [--train_size_b_1 VALUE] [--test_size_a_0 VALUE] [--test_size_a_1 VALUE] [--test_size_b_0 VALUE] [--test_size_b_1 VALUE] [--penalty VALUE] [--noise_level VALUE]"
+            echo "Usage: $0 [--train_size_a_0 VALUE] [--train_size_a_1 VALUE] [--train_size_b_0 VALUE] [--train_size_b_1 VALUE] [--test_size_a_0 VALUE] [--test_size_a_1 VALUE] [--test_size_b_0 VALUE] [--test_size_b_1 VALUE] [--penalty VALUE] [--noise_level VALUE] [--D VALUE]"
             exit 1
             ;;
     esac
@@ -74,6 +79,7 @@ echo "  test_size_b_0: $TEST_SIZE_B_0"
 echo "  test_size_b_1: $TEST_SIZE_B_1"
 echo "  penalty: $PENALTY"
 echo "  noise_level: $NOISE_LEVEL"
+echo "  D: $D"
 
 # Function to check system resources
 check_resources() {
@@ -134,7 +140,7 @@ trap cleanup SIGINT SIGTERM
 # Common arguments for all runs
 COMMON_ARGS="--train_size_a_0 $TRAIN_SIZE_A_0 --train_size_a_1 $TRAIN_SIZE_A_1 --train_size_b_0 $TRAIN_SIZE_B_0 --train_size_b_1 $TRAIN_SIZE_B_1 \
             --test_size_a_0 $TEST_SIZE_A_0 --test_size_a_1 $TEST_SIZE_A_1 --test_size_b_0 $TEST_SIZE_B_0 --test_size_b_1 $TEST_SIZE_B_1 \
-            --penalty $PENALTY --noise_level $NOISE_LEVEL"
+            --penalty $PENALTY --noise_level $NOISE_LEVEL --D $D"
 
 # Array to store process PIDs
 declare -a PIDS=()
@@ -142,7 +148,8 @@ declare -a RUN_IDS=()
 declare -a GPU_IDS=()
 
 # File to record successful process IDs
-SUCCESS_LOG_FILE="successful_processes_$(date +%Y%m%d_%H%M%S).txt"
+SUCCESS_LOG_FILE="experiment_logs/successful_processes_$(date +%Y%m%d_%H%M%S).txt"
+mkdir -p "experiment_logs"
 echo "# Successful process IDs for experiment started at $(date)" > "$SUCCESS_LOG_FILE"
 
 # Function to run a single instance with retry mechanism
@@ -272,24 +279,38 @@ done
 echo "Process completion status recorded in: $SUCCESS_LOG_FILE"
 echo "All runs completed. Combining results..."
 
+# Create necessary directories
+mkdir -p experiment_logs
+mkdir -p results
+
+# Export variables for Python script
+export TRAIN_SIZE_A_0 TRAIN_SIZE_A_1 TRAIN_SIZE_B_0 TRAIN_SIZE_B_1
+export TEST_SIZE_A_0 TEST_SIZE_A_1 TEST_SIZE_B_0 TEST_SIZE_B_1
+export PENALTY NOISE_LEVEL D
+
 # Combine results from all runs
-python - << EOF
+python3 - << 'EOF'
 import numpy as np
 import glob
 import time
-import fcntl
+import os
 
 # Extract all parameter values from shell variables
-train_size_a_0 = $TRAIN_SIZE_A_0
-train_size_a_1 = $TRAIN_SIZE_A_1
-train_size_b_0 = $TRAIN_SIZE_B_0
-train_size_b_1 = $TRAIN_SIZE_B_1
-test_size_a_0 = $TEST_SIZE_A_0
-test_size_a_1 = $TEST_SIZE_A_1
-test_size_b_0 = $TEST_SIZE_B_0
-test_size_b_1 = $TEST_SIZE_B_1
-penalty = $PENALTY
-noise = $NOISE_LEVEL
+train_size_a_0 = int(os.environ.get('TRAIN_SIZE_A_0', 30))
+train_size_a_1 = int(os.environ.get('TRAIN_SIZE_A_1', 30))
+train_size_b_0 = int(os.environ.get('TRAIN_SIZE_B_0', 30))
+train_size_b_1 = int(os.environ.get('TRAIN_SIZE_B_1', 30))
+test_size_a_0 = int(os.environ.get('TEST_SIZE_A_0', 20))
+test_size_a_1 = int(os.environ.get('TEST_SIZE_A_1', 40))
+test_size_b_0 = int(os.environ.get('TEST_SIZE_B_0', 40))
+test_size_b_1 = int(os.environ.get('TEST_SIZE_B_1', 20))
+# Handle penalty as float first, then convert to int if needed
+penalty_str = os.environ.get('PENALTY', '100')
+penalty = int(float(penalty_str))
+# Handle noise_level as float first, then convert to int if needed
+noise_str = os.environ.get('NOISE_LEVEL', '0')
+noise = int(float(noise_str))
+d_value = int(os.environ.get('D', 3000))
 
 # Arrays to store results
 all_scores = []
@@ -297,7 +318,7 @@ all_losses = []
 all_accs = []
 
 # Get all output files matching the pattern
-output_files = glob.glob(f"output_copy_*_train_{train_size_a_0}_{train_size_a_1}_{train_size_b_0}_{train_size_b_1}_test_{test_size_a_0}_{test_size_a_1}_{test_size_b_0}_{test_size_b_1}_penalty_{penalty}_noise_{noise}.txt")
+output_files = glob.glob(f"output_copy_*_train_{train_size_a_0}_{train_size_a_1}_{train_size_b_0}_{train_size_b_1}_test_{test_size_a_0}_{test_size_a_1}_{test_size_b_0}_{test_size_b_1}_penalty_{penalty}_noise_{noise}_D_{d_value}.txt")
 
 print(f"Found {len(output_files)} output files to process")
 
@@ -309,12 +330,16 @@ time.sleep(3)
 for filename in sorted(output_files):
     try:
         with open(filename, 'r') as f:
-            line = f.readline().strip()
+            # 只读取最后一行数据
+            lines = f.readlines()
+            if not lines:
+                raise ValueError(f"No lines found in {filename}")
+            line = lines[-1].strip()
             # Parse the line to extract score, loss, and accuracy values
             parts = line.split('&')
-            score_mean = float(parts[2].split('\\\\pm')[0])
-            loss_mean = float(parts[3].split('\\\\pm')[0])
-            acc_mean = float(parts[4].split('\\\\pm')[0])
+            score_mean = float(parts[2].strip().split('\\pm')[0])
+            loss_mean = float(parts[3].strip().split('\\pm')[0])
+            acc_mean = float(parts[4].strip().split('\\pm')[0])
             
             all_scores.append(score_mean)
             all_losses.append(loss_mean)
@@ -335,16 +360,11 @@ if all_scores:
     acc_mean = np.mean(all_accs)
     acc_std = np.std(all_accs)
 
-    # Write final results with file lock
-    with open('output_copy_final.txt', 'a') as f:
-        # 获取独占锁用于写入
-        fcntl.flock(f.fileno(), fcntl.LOCK_EX)
-        try:
-            f.write(f"train size: {train_size_a_0}, {train_size_a_1}, {train_size_b_0}, {train_size_b_1}; test size: {test_size_a_0}, {test_size_a_1}, {test_size_b_0}, {test_size_b_1}\n")
-            f.write(f"{penalty} & {noise} & Copy & {score_mean:.4f}\\\\pm{score_std:.4f} & {loss_mean:.4f}\\\\pm{loss_std:.4f} & {acc_mean:.4f}\\\\pm{acc_std:.4f}\n")
-            f.flush()  # 确保数据立即写入
-        finally:
-            fcntl.flock(f.fileno(), fcntl.LOCK_UN)
+    # Write final results without file lock
+    with open('output_copy_final.txt', 'a+') as f:
+        f.write(f"train size: {train_size_a_0}, {train_size_a_1}, {train_size_b_0}, {train_size_b_1}; test size: {test_size_a_0}, {test_size_a_1}, {test_size_b_0}, {test_size_b_1}\n")
+        f.write(f"{penalty} & {noise} & Copy & {score_mean:.4f}\\\\pm{score_std:.4f} & {loss_mean:.4f}\\\\pm{loss_std:.4f} & {acc_mean:.4f}\\\\pm{acc_std:.4f}\n")
+        f.flush()  # 确保数据立即写入
 
     print("Results have been combined and written to output_copy_final.txt")
 else:

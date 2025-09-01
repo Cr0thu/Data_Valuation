@@ -333,10 +333,11 @@ parser.add_argument("--test_size_a_0", type=int, required=True, help="Test size 
 parser.add_argument("--test_size_a_1", type=int, required=True, help="Test size A_1")
 parser.add_argument("--test_size_b_0", type=int, required=True, help="Test size B_0")
 parser.add_argument("--test_size_b_1", type=int, required=True, help="Test size B_1")
-parser.add_argument("--penalty", type=float, required=True, help="Penalty parameter")
+parser.add_argument("--penalty", type=int, required=True, help="Penalty parameter")
 parser.add_argument("--gpu_id", type=int, required=True, help="GPU device ID to use")
 parser.add_argument("--run_id", type=int, required=True, help="Run ID (1-10)")
-parser.add_argument("--noise_level", type=float, default=0, help="Noise level for data generation")
+parser.add_argument("--noise_level", type=int, default=0, help="Noise level for data generation")
+parser.add_argument("--D", type=int, default=3000, help="Number of iterations for the experiment")
 
 args = parser.parse_args()
 
@@ -345,7 +346,7 @@ device = torch.device(f"cuda:{args.gpu_id}" if torch.cuda.is_available() else "c
 print(f"Using device: {device}")
 
 # Create output file specific to this run
-output_file = f"output_copy_{args.run_id}_train_{args.train_size_a_0}_{args.train_size_a_1}_{args.train_size_b_0}_{args.train_size_b_1}_test_{args.test_size_a_0}_{args.test_size_a_1}_{args.test_size_b_0}_{args.test_size_b_1}_penalty_{args.penalty}_noise_{args.noise_level}.txt"
+output_file = f"output_copy_{args.run_id}_train_{args.train_size_a_0}_{args.train_size_a_1}_{args.train_size_b_0}_{args.train_size_b_1}_test_{args.test_size_a_0}_{args.test_size_a_1}_{args.test_size_b_0}_{args.test_size_b_1}_penalty_{args.penalty}_noise_{args.noise_level}_D_{args.D}.txt"
 
 resnet50 = models.resnet50(pretrained=True)
 resnet50.fc = torch.nn.Identity()
@@ -881,7 +882,7 @@ def data_denoise(train_data, num_candidate, ratio = 0.5):
     return new_train_data
 
 T = 1
-D = 3000
+D = args.D
 train_size_a_0 = args.train_size_a_0
 train_size_a_1 = args.train_size_a_1
 train_size_b_0 = args.train_size_b_0

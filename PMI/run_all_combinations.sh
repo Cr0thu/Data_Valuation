@@ -115,8 +115,29 @@ run_single_experiment() {
         fi
         
         # 统计成功完成的进程数量
-        local completed_count=$(grep -c "COMPLETED_SUCCESSFULLY" "$process_log_file" 2>/dev/null || echo "0")
-        local total_started=$(grep -c "RUN_ID:" "$process_log_file" 2>/dev/null || echo "0")
+        # 首先尝试从successful_processes文件中读取状态信息
+        local success_log_file=$(ls -t experiment_logs/successful_processes_*.txt 2>/dev/null | head -1)
+        if [ -n "$success_log_file" ]; then
+            local completed_count=$(grep -c "COMPLETED_SUCCESSFULLY" "$success_log_file" 2>/dev/null || echo "0")
+            local total_started=$(grep -c "RUN_ID:" "$success_log_file" 2>/dev/null || echo "0")
+        else
+            # 如果没有找到successful_processes文件，则从process_log_file中查找
+            local completed_count=$(grep -c "COMPLETED_SUCCESSFULLY" "$process_log_file" 2>/dev/null || echo "0")
+            local total_started=$(grep -c "RUN_ID:" "$process_log_file" 2>/dev/null || echo "0")
+        fi
+        
+        # 确保变量是纯数字，去除可能的换行符和空格
+        completed_count=$(echo "$completed_count" | tr -d '\n\r' | tr -s ' ')
+        total_started=$(echo "$total_started" | tr -d '\n\r' | tr -s ' ')
+        
+        # 验证变量是否为有效数字
+        if ! [[ "$completed_count" =~ ^[0-9]+$ ]]; then
+            completed_count=0
+        fi
+        if ! [[ "$total_started" =~ ^[0-9]+$ ]]; then
+            total_started=0
+        fi
+        
         echo "Process completion summary: $completed_count/$total_started processes completed successfully" | tee -a "$log_file"
         
         # 更新全局统计
@@ -245,6 +266,12 @@ generate_summary() {
     echo "Comprehensive experiment results saved to: $RESULTS_DIR/"
     echo "Comprehensive experiment summary saved to: $RESULTS_DIR/comprehensive_experiment_summary.txt"
     echo "Individual logs saved to: $LOG_DIR/"
+    
+    # 清理临时文件
+    echo "Cleaning up temporary files..."
+    # 只删除单个实验输出，不删除 output_copy_final.txt
+    rm -f output_copy_[0-9]*.txt 2>/dev/null || true
+    echo "Cleanup completed."
 }
 
 # 主程序
