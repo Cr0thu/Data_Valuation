@@ -333,7 +333,7 @@ parser.add_argument("--test_size_a_0", type=int, required=True, help="Test size 
 parser.add_argument("--test_size_a_1", type=int, required=True, help="Test size A_1")
 parser.add_argument("--test_size_b_0", type=int, required=True, help="Test size B_0")
 parser.add_argument("--test_size_b_1", type=int, required=True, help="Test size B_1")
-parser.add_argument("--penalty", type=int, required=True, help="Penalty parameter")
+parser.add_argument("--penalty", type=float, required=True, help="Penalty parameter")
 parser.add_argument("--gpu_id", type=int, required=True, help="GPU device ID to use")
 parser.add_argument("--run_id", type=int, required=True, help="Run ID (1-10)")
 parser.add_argument("--noise_level", type=int, default=0, help="Noise level for data generation")
@@ -346,7 +346,9 @@ device = torch.device(f"cuda:{args.gpu_id}" if torch.cuda.is_available() else "c
 print(f"Using device: {device}")
 
 # Create output file specific to this run
-output_file = f"output_copy_{args.run_id}_train_{args.train_size_a_0}_{args.train_size_a_1}_{args.train_size_b_0}_{args.train_size_b_1}_test_{args.test_size_a_0}_{args.test_size_a_1}_{args.test_size_b_0}_{args.test_size_b_1}_penalty_{args.penalty}_noise_{args.noise_level}_D_{args.D}.txt"
+# Format penalty for filename (replace decimal point with underscore for consistency)
+penalty_str_for_filename = f"{args.penalty:.1f}".replace('.', '_') if args.penalty != int(args.penalty) else str(int(args.penalty))
+output_file = f"output_copy_{args.run_id}_train_{args.train_size_a_0}_{args.train_size_a_1}_{args.train_size_b_0}_{args.train_size_b_1}_test_{args.test_size_a_0}_{args.test_size_a_1}_{args.test_size_b_0}_{args.test_size_b_1}_penalty_{penalty_str_for_filename}_noise_{args.noise_level}_D_{args.D}.txt"
 
 resnet50 = models.resnet50(pretrained=True)
 resnet50.fc = torch.nn.Identity()
@@ -371,11 +373,32 @@ preprocess = transforms.Compose([
     transforms.ToTensor(),
     normalize
 ])
+# Load all CIFAR-10 labels and process all 10 classes
 labels = np.load('../CIFAR-10-C/labels.npy')
-selected_indices_0 = labels == 0
-selected_indices_1 = labels == 1
+all_selected_indices = {}
+for label in range(10):
+    all_selected_indices[label] = labels == label
 
-def data_preprocess(images):
+def data_preprocess_all_labels(images):
+    """Process images for all 10 CIFAR-10 labels"""
+    embeddings = {}
+    for label in range(10):
+        selected_images = torch.stack([preprocess(image) for image in images[all_selected_indices[label]]]).to(device)
+        with torch.no_grad():
+            embedding = resnet50(selected_images)
+            # Create ones tensor once and reuse
+            ones = torch.ones(embedding.size()[0], 1, device=device)
+            embedding = torch.cat([embedding, ones], dim=1)
+            perm = torch.randperm(len(embedding), device=device)
+            embedding = embedding[perm]
+        embeddings[label] = embedding
+    return embeddings
+
+def data_preprocess(images, label_0, label_1):
+    """Process images for two specific labels (for compatibility with existing code)"""
+    selected_indices_0 = all_selected_indices[label_0]
+    selected_indices_1 = all_selected_indices[label_1]
+    
     images_0 = torch.stack([preprocess(image) for image in images[selected_indices_0]]).to(device)
     images_1 = torch.stack([preprocess(image) for image in images[selected_indices_1]]).to(device)
     with torch.no_grad():
@@ -391,97 +414,55 @@ def data_preprocess(images):
         embedding_1 = embedding_1[perm]
     return embedding_0, embedding_1
 
-
+# Process all labels for all corruption types
+print("Processing all CIFAR-10 labels for brightness...")
 images = np.load('../CIFAR-10-C/brightness.npy')
-images_a_0_embedding, images_a_1_embedding = data_preprocess(images)
+all_images_a_embeddings = data_preprocess_all_labels(images)
+
+print("Processing all CIFAR-10 labels for contrast...")
 images = np.load('../CIFAR-10-C/contrast.npy')
-images_b_0_embedding, images_b_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/defocus_blur.npy')
-# images_c_0_embedding, images_c_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/elastic_transform.npy')
-# images_d_0_embedding, images_d_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/fog.npy')
-# images_e_0_embedding, images_e_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/frost.npy')
-# images_f_0_embedding, images_f_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/gaussian_blur.npy')
-# images_g_0_embedding, images_g_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/gaussian_noise.npy')
-# images_h_0_embedding, images_h_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/glass_blur.npy')
-# images_i_0_embedding, images_i_1_embedding = data_preprocess(images)
-# images = np.load('../CIFAR-10-C/impulse_noise.npy')
-# images_j_0_embedding, images_j_1_embedding = data_preprocess(images)
-# Assuming the embeddings are loaded as numpy arrays
-datasets = [
-    images_a_0_embedding, 
-    images_a_1_embedding, 
-    images_b_0_embedding, 
-    images_b_1_embedding
-]
+all_images_b_embeddings = data_preprocess_all_labels(images)
+
+# Normalize all embeddings together
+print("Normalizing embeddings...")
+all_datasets = []
+for label in range(10):
+    all_datasets.extend([
+        all_images_a_embeddings[label],
+        all_images_b_embeddings[label]
+    ])
 
 # Concatenate all datasets to calculate the mean and standard deviation
-combined_data = torch.cat(datasets, dim=0)  # Shape: (20000, 513)
+combined_data = torch.cat(all_datasets, dim=0)
 
 # Compute mean and std across the feature dimension (dim=0)
 mean = combined_data.mean(dim=0, keepdim=True)
 std = combined_data.std(dim=0, keepdim=True)
 
 # Normalize each dataset using the same mean and std
-normalized_datasets = [(dataset - mean) / (std + 1e-6) for dataset in datasets]
+for label in range(10):
+    all_images_a_embeddings[label] = (all_images_a_embeddings[label] - mean) / (std + 1e-6)
+    all_images_b_embeddings[label] = (all_images_b_embeddings[label] - mean) / (std + 1e-6)
 
-# Unpack the normalized datasets
-images_a_0_embedding, images_a_1_embedding, images_b_0_embedding, images_b_1_embedding = normalized_datasets
+print("All embeddings processed and normalized.")
 
+# Use labels 4 and 5 as default for P_x, P_y, Q_x, Q_y (will be updated in each iteration)
+default_label_0, default_label_1 = 4, 5
 P_x = torch.concatenate([
-    images_a_0_embedding[4000:],
-    images_b_0_embedding[4000:],
-    # images_c_0_embedding[4000:],
-    # images_d_0_embedding[4000:],
-    # images_e_0_embedding[4000:],
-    # images_f_0_embedding[4000:],
-    # images_g_0_embedding[4000:],
-    # images_h_0_embedding[4000:],
-    # images_i_0_embedding[4000:],
-    # images_j_0_embedding[4000:],
-    images_a_1_embedding[4000:],
-    images_b_1_embedding[4000:],
-    # images_c_1_embedding[4000:],
-    # images_d_1_embedding[4000:],
-    # images_e_1_embedding[4000:],
-    # images_f_1_embedding[4000:],
-    # images_g_1_embedding[4000:],
-    # images_h_1_embedding[4000:],
-    # images_i_1_embedding[4000:],
-    # images_j_1_embedding[4000:]
+    all_images_a_embeddings[default_label_0][4000:],
+    all_images_b_embeddings[default_label_0][4000:],
+    all_images_a_embeddings[default_label_1][4000:],
+    all_images_b_embeddings[default_label_1][4000:],
 ])
-# P_y = torch.concatenate([torch.zeros(10000), torch.ones(10000)]).to(device)
 P_y = torch.concatenate([torch.zeros(2000), torch.ones(2000)]).to(device)
 Q_x = torch.concatenate([
-    images_a_0_embedding[:4000],
-    images_b_0_embedding[:4000],
-    # images_c_0_embedding[:4000],
-    # images_d_0_embedding[:4000],
-    # images_e_0_embedding[:4000],
-    # images_f_0_embedding[:4000],
-    # images_g_0_embedding[:4000],
-    # images_h_0_embedding[:4000],
-    # images_i_0_embedding[:4000],
-    # images_j_0_embedding[:4000],
-    images_a_1_embedding[:4000],
-    images_b_1_embedding[:4000],
-    # images_c_1_embedding[:4000],
-    # images_d_1_embedding[:4000],
-    # images_e_1_embedding[:4000],
-    # images_f_1_embedding[:4000],
-    # images_g_1_embedding[:4000],
-    # images_h_1_embedding[:4000],
-    # images_i_1_embedding[:4000],
-    # images_j_1_embedding[:4000]
+    all_images_a_embeddings[default_label_0][:4000],
+    all_images_b_embeddings[default_label_0][:4000],
+    all_images_a_embeddings[default_label_1][:4000],
+    all_images_b_embeddings[default_label_1][:4000],
 ])
-# Q_y = torch.concatenate([torch.zeros(40000), torch.ones(40000)]).to(device)
 Q_y = torch.concatenate([torch.zeros(8000), torch.ones(8000)]).to(device)
-# del resnet18
+
 allocated_memory = torch.cuda.memory_allocated()
 print(f"Already allocated: {allocated_memory / 1024 ** 2} MB")
 print(P_x[0].sum(), P_y.size())
@@ -510,7 +491,7 @@ def generate_data_cifar10(indices, dataset, label, noise):
     # print(y)
     return X, y, X.size()[0]
 
-def generate_train_cifar10(train_size_a_0, train_size_a_1, train_size_b_0, train_size_b_1, train_number, noise_level):
+def generate_train_cifar10(train_size_a_0, train_size_a_1, train_size_b_0, train_size_b_1, train_number, noise_level, label_0, label_1):
     train_dataset = []
     bias = torch.tensor([
         train_size_a_0, train_size_b_0,
@@ -525,10 +506,10 @@ def generate_train_cifar10(train_size_a_0, train_size_a_1, train_size_b_0, train
         sample_indices_b_0 = perm_indices_b_0[:train_size_b_0]
         perm_indices_b_1 = torch.randperm(4000, device=device)
         sample_indices_b_1 = perm_indices_b_1[:train_size_b_1]
-        train_X_a_0, train_y_a_0, _ = generate_data_cifar10(sample_indices_a_0, images_a_0_embedding[:4000], 0, eps * noise_level)
-        train_X_a_1, train_y_a_1, _ = generate_data_cifar10(sample_indices_a_1, images_a_1_embedding[:4000], 1, eps * noise_level)
-        train_X_b_0, train_y_b_0, _ = generate_data_cifar10(sample_indices_b_0, images_b_0_embedding[:4000], 0, eps * noise_level)
-        train_X_b_1, train_y_b_1, _ = generate_data_cifar10(sample_indices_b_1, images_b_1_embedding[:4000], 1, eps * noise_level)
+        train_X_a_0, train_y_a_0, _ = generate_data_cifar10(sample_indices_a_0, all_images_a_embeddings[label_0][:4000], 0, eps * noise_level)
+        train_X_a_1, train_y_a_1, _ = generate_data_cifar10(sample_indices_a_1, all_images_a_embeddings[label_1][:4000], 1, eps * noise_level)
+        train_X_b_0, train_y_b_0, _ = generate_data_cifar10(sample_indices_b_0, all_images_b_embeddings[label_0][:4000], 0, eps * noise_level)
+        train_X_b_1, train_y_b_1, _ = generate_data_cifar10(sample_indices_b_1, all_images_b_embeddings[label_1][:4000], 1, eps * noise_level)
         train_X = torch.cat([train_X_a_0, train_X_b_0, train_X_a_1, train_X_b_1], dim=0)
         train_y = torch.cat([train_y_a_0, train_y_b_0, train_y_a_1, train_y_b_1], dim=0)
         train_dataset.append(dataset(train_X, train_y, train_X.size()[0], 0, 0, 0, noise_level*eps, bias, [], []))
@@ -926,29 +907,42 @@ for d in tqdm(range(D), desc=f"GPU {args.gpu_id}, run_id {args.run_id}"):
         torch.cuda.empty_cache()
         gc.collect()
     
-    test_X = P_x
-    test_y = P_y
+    # Randomly sample two different labels for this iteration
+    selected_labels = torch.randperm(10, device=device)[:2].cpu().numpy()
+    label_0, label_1 = int(selected_labels[0]), int(selected_labels[1])
+    
+    # Update test data for this iteration
+    test_X = torch.concatenate([
+        all_images_a_embeddings[label_0][4000:],
+        all_images_b_embeddings[label_0][4000:],
+        all_images_a_embeddings[label_1][4000:],
+        all_images_b_embeddings[label_1][4000:],
+    ])
+    test_y = torch.concatenate([torch.zeros(2000), torch.ones(2000)]).to(device)
 
-    train_data = generate_train_cifar10(train_size_a_0, train_size_a_1, train_size_b_0, train_size_b_1, num_candidate, noise_level)
+    train_data = generate_train_cifar10(train_size_a_0, train_size_a_1, train_size_b_0, train_size_b_1, num_candidate, noise_level, label_0, label_1)
     mimic_label_copy_train_data = mimic_label_copy(train_data, num_candidate, test_ratio)
 
-    sample_test_X_a_0, sample_test_y_a_0 = subsample(images_a_0_embedding[4000:], torch.zeros(1000, device=device), test_size_a_0)
-    sample_test_X_a_1, sample_test_y_a_1 = subsample(images_a_1_embedding[4000:], torch.ones(1000, device=device), test_size_a_1)
-    sample_test_X_b_0, sample_test_y_b_0 = subsample(images_b_0_embedding[4000:], torch.zeros(1000, device=device), test_size_b_0)
-    sample_test_X_b_1, sample_test_y_b_1 = subsample(images_b_1_embedding[4000:], torch.ones(1000, device=device), test_size_b_1)
+    sample_test_X_a_0, sample_test_y_a_0 = subsample(all_images_a_embeddings[label_0][4000:], torch.zeros(1000, device=device), test_size_a_0)
+    sample_test_X_a_1, sample_test_y_a_1 = subsample(all_images_a_embeddings[label_1][4000:], torch.ones(1000, device=device), test_size_a_1)
+    sample_test_X_b_0, sample_test_y_b_0 = subsample(all_images_b_embeddings[label_0][4000:], torch.zeros(1000, device=device), test_size_b_0)
+    sample_test_X_b_1, sample_test_y_b_1 = subsample(all_images_b_embeddings[label_1][4000:], torch.ones(1000, device=device), test_size_b_1)
     sample_test_X = torch.cat([sample_test_X_a_0, sample_test_X_b_0, sample_test_X_a_1, sample_test_X_b_1], dim=0)
     sample_test_y = torch.cat([sample_test_y_a_0, sample_test_y_b_0, sample_test_y_a_1, sample_test_y_b_1], dim=0)
 
     get_err_score(train_data, sample_test_X, sample_test_y, num_candidate, test_ratio)
     get_err_score(mimic_label_copy_train_data, sample_test_X, sample_test_y, num_candidate, test_ratio)
     
-    # Output the accuracy of trained logistic regression models
+    # Output the accuracy and PMI values of trained logistic regression models
     if d == 0:
-        print(f"Iteration {d}:")
+        print(f"Iteration {d} (using labels {label_0} and {label_1}):")
         for i in range(num_candidate):
             print(f"  Original model accuracy: {train_data[i].base_acc:.4f}")
+            print(f"  Original model PMI score: {train_data[i].score:.6f}")
             print(f"  Mimic label copy model accuracy: {mimic_label_copy_train_data[i].base_acc:.4f}")
+            print(f"  Mimic label copy model PMI score: {mimic_label_copy_train_data[i].score:.6f}")
             print(f"  Accuracy difference: {mimic_label_copy_train_data[i].base_acc - train_data[i].base_acc:.4f}")
+            print(f"  PMI score difference: {mimic_label_copy_train_data[i].score - train_data[i].score:.6f}")
         print("---")
 
     for i in range(num_candidate):
@@ -958,6 +952,14 @@ for d in tqdm(range(D), desc=f"GPU {args.gpu_id}, run_id {args.run_id}"):
         mimic_label_copy_loss.append(mimic_label_copy_train_data[i].base_loss)
         pre_acc.append(train_data[i].base_acc)
         mimic_label_copy_acc.append(mimic_label_copy_train_data[i].base_acc)
+    
+    # Periodically output PMI values for monitoring
+    if d == 0:
+        current_pre_score = torch.tensor(pre_score[-num_candidate:], device=device)
+        current_mimic_score = torch.tensor(mimic_label_copy_score[-num_candidate:], device=device)
+        print(f"Iteration {d} (labels {label_0},{label_1}): PMI scores - Original: {current_pre_score.mean().item():.6f} ± {current_pre_score.std().item():.6f}, "
+              f"Mimic: {current_mimic_score.mean().item():.6f} ± {current_mimic_score.std().item():.6f}, "
+              f"Difference: {(current_mimic_score.mean() - current_pre_score.mean()).item():.6f}")
 
 # Calculate statistics
 pre_score_tensor = torch.tensor(pre_score, device=device)
@@ -974,11 +976,15 @@ mimic_label_copy_loss_std = (mimic_label_copy_loss_tensor - pre_loss_tensor).std
 mimic_label_copy_acc_mean = (mimic_label_copy_acc_tensor - pre_acc_tensor).mean().item()
 mimic_label_copy_acc_std = (mimic_label_copy_acc_tensor - pre_acc_tensor).std().item()
 
-print(f"\n=== SUMMARY ===")
+print(f"\n=== SUMMARY (Random Label Pairs) ===")
+print(f"Note: Each iteration used a randomly selected pair of CIFAR-10 labels (0-9)")
+print(f"Total iterations: {D}")
 print(f"Average original model accuracy: {pre_acc_tensor.mean().item():.4f} ± {pre_acc_tensor.std().item():.4f}")
+print(f"Average original model PMI score: {pre_score_tensor.mean().item():.6f} ± {pre_score_tensor.std().item():.6f}")
 print(f"Average mimic label copy model accuracy: {mimic_label_copy_acc_tensor.mean().item():.4f} ± {mimic_label_copy_acc_tensor.std().item():.4f}")
+print(f"Average mimic label copy model PMI score: {mimic_label_copy_score_tensor.mean().item():.6f} ± {mimic_label_copy_score_tensor.std().item():.6f}")
 print(f"Accuracy change (mean ± std): {mimic_label_copy_acc_mean:.4f} ± {mimic_label_copy_acc_std:.4f}")
-print(f"Score change (mean ± std): {mimic_label_copy_score_mean:.4f} ± {mimic_label_copy_score_std:.4f}")
+print(f"PMI score change (mean ± std): {mimic_label_copy_score_mean:.6f} ± {mimic_label_copy_score_std:.6f}")
 print(f"Loss change (mean ± std): {mimic_label_copy_loss_mean:.4f} ± {mimic_label_copy_loss_std:.4f}")
 print("=" * 50)
 

@@ -304,9 +304,9 @@ test_size_a_0 = int(os.environ.get('TEST_SIZE_A_0', 20))
 test_size_a_1 = int(os.environ.get('TEST_SIZE_A_1', 40))
 test_size_b_0 = int(os.environ.get('TEST_SIZE_B_0', 40))
 test_size_b_1 = int(os.environ.get('TEST_SIZE_B_1', 20))
-# Handle penalty as float first, then convert to int if needed
+# Handle penalty as float
 penalty_str = os.environ.get('PENALTY', '100')
-penalty = int(float(penalty_str))
+penalty = float(penalty_str)
 # Handle noise_level as float first, then convert to int if needed
 noise_str = os.environ.get('NOISE_LEVEL', '0')
 noise = int(float(noise_str))
@@ -318,7 +318,9 @@ all_losses = []
 all_accs = []
 
 # Get all output files matching the pattern
-output_files = glob.glob(f"output_copy_*_train_{train_size_a_0}_{train_size_a_1}_{train_size_b_0}_{train_size_b_1}_test_{test_size_a_0}_{test_size_a_1}_{test_size_b_0}_{test_size_b_1}_penalty_{penalty}_noise_{noise}_D_{d_value}.txt")
+# Convert penalty to string with proper formatting for filename matching
+penalty_str_for_filename = f"{penalty:.1f}".replace('.', '_') if penalty != int(penalty) else str(int(penalty))
+output_files = glob.glob(f"output_copy_*_train_{train_size_a_0}_{train_size_a_1}_{train_size_b_0}_{train_size_b_1}_test_{test_size_a_0}_{test_size_a_1}_{test_size_b_0}_{test_size_b_1}_penalty_{penalty_str_for_filename}_noise_{noise}_D_{d_value}.txt")
 
 print(f"Found {len(output_files)} output files to process")
 
